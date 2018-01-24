@@ -265,7 +265,7 @@ a.goto-btn { margin-right: 30px }
   width: 100%;
 }
 
-#tf-home.parallax .bcg { background-image:url('../img/bg/slider03.jpg'); }
+#tf-home.parallax .bcg { background-image:url('../img/bg/'); }
 .parallax  .content-heading{
     padding: 20% 0;
     text-align: center;
