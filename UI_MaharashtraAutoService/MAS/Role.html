@@ -109,7 +109,7 @@
 
             <div class="row text-center"> <!-- contact form outer row with centered text-->
                 <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                    <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:8080/AddRole"> <!-- form wrapper -->
+                    <form id="contact-form" class="form" name="sentMessage" novalidate> <!-- form wrapper -->
 
 					<h2>Roles</h2>
                         <div class="row"> <!-- nested inner row -->
@@ -117,19 +117,19 @@
                             <!-- Input your name -->
                             <div class="col-md-12">
                                 <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Role Name *" id="rolName" name="rolName" required data-validation-required-message="Please enter role name.">
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Role Name *" id="rolName" required data-validation-required-message="Please enter role name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
 							 <!-- Input your name -->
                             <div class="col-md-12">
                                 <div class="form-group"> 
-								 <textarea class="form-control" rows="7" placeholder="Role Description" id="rolDes" name="rolDes" required data-validation-required-message="Please enter role description."></textarea>
+								 <textarea class="form-control" rows="7" placeholder="Role Description" id="rolDes" required data-validation-required-message="Please enter role description."></textarea>
                                    
                                 </div>
                             </div>
                          </div>                            
-                        <input type="submit" value="Submit"></input> <!-- Send button -->
+                        <button type="submit" class="btn btn-primary tf-btn color">Submit</button> <!-- Send button -->
 
                     </form><!-- end form wrapper -->
                 </div><!-- end col 10 with offset 1 to centered -->
@@ -170,6 +170,7 @@
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
 
     <!-- Google Map -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
     <script type="text/javascript" src="js/map.js"></script>
 
     <!-- Parallax Effects -->
@@ -184,7 +185,7 @@
 
     <!-- Contact page-->
     <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-    
+    <script type="text/javascript" src="js/contact.js"></script>
 
     <!-- Javascripts
     ================================================== -->
