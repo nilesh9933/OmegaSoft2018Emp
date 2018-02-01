@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
 <title>
@@ -133,4 +134,145 @@ filterable:true,
 
 </body>
 
+=======
+<html>
+<head>
+<title>
+</title>
+
+<link rel="stylesheet" href="css/kendo.common-material.min.css" />
+<link rel="stylesheet" href="css/kendo.material.min.css" />
+<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/kendo.all.min.js"></script>
+
+
+<script>
+
+
+var myData;
+$(document).ready(function(){
+
+$.ajax({
+
+type:"GET",
+url:"http://localhost:8080//GetProductTypes",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success:function(data)
+{
+debugger;
+myData=data;
+$("#myDropDown").kendoDropDownList({
+                        dataTextField: "proType",
+                        dataValueField: "proTypeId",
+                        dataSource: data,
+                        index: 0,
+                        change: fillData
+});
+console.log(data);
+},
+error:function(e)
+{
+debugger;
+console.log(e);
+}
+
+});
+
+
+
+$.ajax({
+
+type:"GET",
+url:"http://localhost:8080//GetUserRoles",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success:function(data)
+{
+debugger;
+myData=data;
+$("#myDropDown1").kendoDropDownList({
+                        dataTextField: "rolName",
+                        dataValueField: "rolId",
+                        dataSource: data,
+                        index: 0,
+                        change: fillData
+});
+console.log(data);
+},
+error:function(e)
+{
+debugger;
+console.log(e);
+}
+
+});
+
+
+
+
+var employee=["Abhishek","Ashish","Nilesh"];
+
+$(document).ready(function(){
+
+ $("#employees").kendoAutoComplete({
+                        
+						dataSource: employee,
+						filter: "contains",
+                        //dataTextField: 'FirstName',
+						//dataValueField: 'LastName',                        
+                        placeholder: "Select Employee...",
+                        separator: ", "
+ });
+
+
+
+});
+
+});
+
+
+function fillData()
+{
+
+$('#myGrid').kendoGrid({
+dataSource : myData,
+pageable: true,
+pageSize: 5,
+sortable: true,
+filterable:true,
+});
+}
+
+</script>
+
+
+</head>
+
+<body>
+
+<div id="myDropDown1">
+</div>
+<div id="myDropDown">
+
+</div>
+
+<br>
+<br>
+
+<div id="employees">
+
+</div>
+<br>
+<br>
+<div id="myGrid">
+
+</div>
+
+
+</body>
+
+>>>>>>> bd4d9c5047a925f002ab8acf4685c1840b5f096f
 </html>
