@@ -1,0 +1,10 @@
+www.facebook.com
+
+
+1. DNS
+2. HTTP Pipeline
+  a. HTTP Module
+  b. HTTP handler
+3. Server
+4. Worker process (Load balancing-Web Gardening and Web Farming)
+5. Page life cycle(Controller )
