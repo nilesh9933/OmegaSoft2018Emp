@@ -15,7 +15,7 @@
     <meta name="author" content="ThemeForces.Com">
     
     <!-- Favicons
-    ================================================== -->
+    0================================================== -->
     <link rel="shortcut icon" href="http://localhost/MAS/assets/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="http://localhost/MAS/assets/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="http://localhost/MAS/assets/img/apple-touch-icon-72x72.png">
@@ -24,6 +24,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css"  href="http://localhost/MAS/assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="http://localhost/MAS/assets/fonts/font-awesome/css/font-awesome.css">
+
+
+    <!-- javascript -->
+
+    <script type="text/javascript" src="http://localhost/MAS/assets/js/jquery.min.js"></script>
+
 
     <!-- Nivo Lightbox
     ================================================== -->
@@ -49,7 +55,51 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<script>
+var myData;
+$(document).ready(function(){
 
+$.ajax({
+
+type:"GET",
+url:"http://localhost/MAS/index.php/product",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success:function(data)
+{
+  debugger;
+myData=data;
+$("#myDropDown").kendoDropDownList({
+                   dataTextField: "proType",
+                   dataValueField: "proTypeId",
+                   dataSource: data,
+                   index: 0,
+                   change: fillData
+});
+console.log(data);
+},
+error:function(e)
+{
+debugger;
+console.log(e);
+}
+});
+});
+
+function fillData()
+{
+
+$('#myDropDown').kendoDropDownList({
+dataSource : myData,
+pageable: true,
+pageSize: 5,
+sortable: true,
+filterable:true,
+});
+}
+                                                                                                                                             
+
+</script>
  </head>
  <body>
   <!-- Main Navigation 
@@ -61,7 +111,7 @@
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class= "icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="#"><img src="http://localhost/MAS/assets/img/logo.png" alt="..."></a>
@@ -100,7 +150,7 @@
  <div class="row text-center"> <!-- contact form outer row with centered text-->
     <h2>Product Details</h2>
       <div class="col-md-10 col-md-offset-1"> 
-           <form method="post" id="contact-form" class="form" name="sentMessage" novalidate action="product/prodetail">
+           <form method="post" id="contact-form" class="form" name="sentMessage" novalidate action="http://localhost/MAS/index.php/product/prodetail">
                       
              <!--Display Successful Message that you have successfully registered-->
 
@@ -112,13 +162,12 @@
                <div class="row">
                    <div class="col-md-6">
                        <div class="form-group"> <!-- Your name input -->
-                       
-                        <select name="protypeId" autocomplete=off class="form-control" prompt="Select Product Type Id">
-                              <option>Select Product Type Id</option>
-                        </select>
+                          <div id="myDropDown">
+                            
+                          </div>
                           <p class="help-block text-danger"></p>
                           <div class="col-md-12">
-                                <?php echo form_error('protypeId');?>
+                                <?php echo form_error('prodtype');?>
                           </div>
                        </div>
                    </div>
@@ -219,14 +268,13 @@
 
 
                 </div>
-
+                
                           
                         <!--<button type="submit" name="submit" class="btn btn-primary tf-btn color">Submit</button>--> <!-- Send button -->
                         <?php echo form_submit(["name"=>"submit","value"=>"Submit","class"=>"btn btn-primary tf-btn color","onClick"=>"return validation();"]);?>
              </form>
        </div>
  </div>
-
   <div id="tf-footer">
         <div class="container"><!-- container -->
             <p class="pull-left">© 2015 ethanol. All rights reserved. Theme by Rudhi Sasmito.</p> <!-- copyright text here-->
@@ -245,6 +293,9 @@
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <!--<script src="https://kendo.cdn.telerik.com/2018.1.117/js/jquery.min.js"></script>-->
+
+ 
     <script type="text/javascript" src="http://localhost/MAS/assets/js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="http://localhost/MAS/assets/js/bootstrap.js"></script>
@@ -276,4 +327,4 @@
     <script type="text/javascript" src="http://localhost/MAS/assets/js/main.js"></script>
 
  </body>
- </html>
+ </html> 
