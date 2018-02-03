@@ -4,14 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaEmploymentTimes.Model.Subscriptions;
-import com.JavaEmploymentTimes.Util.MySQLConnection;
+import com.JavaEmploymentTimes.Utils.DBConnection;
 
 public class SubscriptionsDao implements ISubscriptionsDao{
 
 	
 	private Connection con;
 	public SubscriptionsDao() {
-		this.con=MySQLConnection.GetConnection();
+		this.con=DBConnection.GetConnection();
 	}
 
 	
@@ -32,7 +32,7 @@ public class SubscriptionsDao implements ISubscriptionsDao{
 			pre.setString(6,subscriptions.getSubAmount());
 			pre.setString(7, subscriptions.getSubValidFor());
 			pre.setString(8, subscriptions.getSubTimeDuration());
-			pre.setString(9, subscriptions.getDelInd());
+			pre.setString(9,"N");
 			pre.setString(10, subscriptions.getUpdateUser());
 			pre.setDate(11, subscriptions.getUpdateDate());
 			pre.setString(12, subscriptions.getIpAddress());

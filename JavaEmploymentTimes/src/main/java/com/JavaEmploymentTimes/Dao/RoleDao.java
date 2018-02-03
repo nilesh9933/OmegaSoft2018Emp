@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaEmploymentTimes.Model.Roles;
-import com.JavaEmploymentTimes.Util.MySQLConnection;
+import com.JavaEmploymentTimes.Utils.DBConnection;
 
 
 public class RoleDao implements IRolesDao {
 	private Connection con;
 	public RoleDao() {
-		this.con=MySQLConnection.GetConnection();
+		this.con=DBConnection.GetConnection();
 	}
 	@Override
 	public String AddRole(Roles roles) {

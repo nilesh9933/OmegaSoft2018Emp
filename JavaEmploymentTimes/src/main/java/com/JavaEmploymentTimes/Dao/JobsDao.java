@@ -5,12 +5,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaEmploymentTimes.Model.Jobs;
-import com.JavaEmploymentTimes.Util.MySQLConnection;
+import com.JavaEmploymentTimes.Utils.DBConnection;
 
 public class JobsDao implements IJobsDao{
 	private Connection con;
 	public JobsDao() {
-		this.con=MySQLConnection.GetConnection();
+		this.con=DBConnection.GetConnection();
 	}
 	@Override
 	public String AddJobs(Jobs jobs) {
@@ -27,7 +27,7 @@ public class JobsDao implements IJobsDao{
 			pre.setString(6, jobs.getJobEndDate());
 			pre.setString(7, jobs.getJobLogoPath());
 			
-			pre.setString(8, jobs.getDelInd());
+			pre.setString(8,"N");
 			pre.setString(9,jobs.getIpAddress());
 			pre.setString(10, jobs.getUpdateUser());
 			pre.setDate(11, jobs.getUpdateDate());

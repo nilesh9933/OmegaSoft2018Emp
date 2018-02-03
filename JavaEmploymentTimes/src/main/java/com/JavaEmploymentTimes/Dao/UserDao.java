@@ -6,13 +6,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaEmploymentTimes.Model.Users;
-import com.JavaEmploymentTimes.Util.MySQLConnection;
+import com.JavaEmploymentTimes.Utils.DBConnection;
 
 public class UserDao implements IUsersDao {
 	
 	private Connection con;
 	public UserDao() {
-		this.con=MySQLConnection.GetConnection();
+		this.con=DBConnection.GetConnection();
 	}
 
 	@Override

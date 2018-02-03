@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaEmploymentTimes.Model.Login;
-import com.JavaEmploymentTimes.Util.MySQLConnection;
+import com.JavaEmploymentTimes.Utils.DBConnection;
 
 public class LoginDao implements ILoginDao{
 	private Connection con;
 	public LoginDao () {
-		this.con=MySQLConnection.GetConnection();
+		this.con=DBConnection.GetConnection();
 	}
 
 	@Override
