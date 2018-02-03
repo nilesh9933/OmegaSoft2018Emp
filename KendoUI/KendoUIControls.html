@@ -77,20 +77,12 @@ var employee=["Abhishek","Ashish","Nilesh"];
 
 $(document).ready(function(){
 
- $("#employees").kendoAutoComplete({
-                        
-						dataSource: employee,
-						filter: "contains",
-                        //dataTextField: 'FirstName',
-						//dataValueField: 'LastName',                        
-                        placeholder: "Select Employee...",
-                        separator: ", "
- });
+ 
 
 $("#myDropDown").kendoDropDownList({
                         dataTextField: "FirstName",
                         dataValueField: "LastName",
-                        dataSource: myData,
+                        dataSource: data,
                         index: 0,
                         change: fillData
 });
