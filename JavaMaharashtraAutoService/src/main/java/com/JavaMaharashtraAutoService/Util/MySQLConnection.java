@@ -1,7 +1,10 @@
 package com.JavaMaharashtraAutoService.Util;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+
+import com.JavaMaharashtraAutoService.Model.Log;
 
 public class MySQLConnection {
 
@@ -17,14 +20,21 @@ public class MySQLConnection {
 				String password = "sa";
 
 				Class.forName(driver);
-				
-				con = DriverManager.getConnection(URL, user, password);
-			}
-		} 
-		
-		catch (Exception e) {
 
-			e.printStackTrace();
+				con = DriverManager.getConnection(URL, user, password);
+			
+			}
+		}
+
+		catch (Exception e) {
+			
+			Log obj = new Log();
+			obj.setEventName("MYSQLConnectionClass");
+			obj.setEventMessage(e.getMessage());			
+			obj.setEventType("Exception");
+			
+			Logger.WriteLog(obj);
+
 		}
 
 		return con;

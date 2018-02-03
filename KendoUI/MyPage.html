@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+
+<body>
+<form method="Get" action="http://localhost:34149/api/My">
+
+<input type="submit" value="Form Post call"/>
+</form>
+
+<input type="button" value="Ajax call" onclick="CallMe();"/>
+
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+function CallMe()
+{
+debugger;
+$.ajax({
+type:"GET",
+url:"http://localhost:8080//GiveName",
+success:function(data)
+{
+debugger;
+alert(data);
+},
+error:function(e)
+{
+debugger;
+console.log(e);
+}
+
+});
+}
+</script>
+</html>
