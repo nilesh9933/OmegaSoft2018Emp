@@ -1,8 +1,10 @@
 package com.JavaMaharashtraAutoService.Util;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import com.JavaMaharashtraAutoService.Model.Log;
 
@@ -10,25 +12,27 @@ public class Logger {
 
 	static Connection con;
 
-	public Logger() {
-		con = MySQLConnection.GetConnection();
-	}
-
 	public static void WriteLog(Log log) {
 		try {
 
-			PreparedStatement pre = con.prepareStatement("insert into log (eventName,eventDate,errorMessage,eventType,updateUser,updateDate) values(?,?,?,?,?,?)");
-			Date curDate = new Date(0);
-			String user="Abhishek";
+			con = MySQLConnection.GetConnection();
+
+			Date curDate = new Date();
+
+			String user = "Abhishek";
+
+			PreparedStatement pre = con.prepareStatement(
+					"INSERT INTO log (eventName,eventDate,errorMessage,eventType,updateUser,updateDate) VALUES (?,?,?,?,?,?)");
+
 			pre.setString(1, log.getEventName());
-			pre.setDate(2, curDate);
+			pre.setDate(2, ConverterUtil.convertFromJAVADateToSQLDate(curDate));
 			pre.setString(3, log.getEventMessage());
 			pre.setString(4, log.getEventType());
 			pre.setString(5, user);
-			pre.setDate(6, curDate);
-			pre.executeQuery();
+			pre.setDate(6, (java.sql.Date) curDate);
+			pre.executeUpdate();
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 	}
 

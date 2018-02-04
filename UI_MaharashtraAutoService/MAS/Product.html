@@ -155,7 +155,7 @@
 	
 	$.ajax({
 	type:"GET",
-	url:"http://localhost:8080/GetProductTypes",
+	url:"http://localhost:9000/GetProductTypes",
 	success:function(data)
 	{
 	
@@ -191,11 +191,11 @@
 	
 	$.ajax({
 	type:"POST",
-	url:"http://localhost:8080/AddProducts",
-	data:"{proName : '"+ product.proName +"',proDes: '"+ product.proDes+"', proTypeId:1 }",
+	url:"http://localhost:9000/AddProducts",
+	data:str,
 	
 	contentType: "application/json; charset=utf-8",
-    //dataType: "json",
+    dataType: "json",
 	
 	success:function(data)
 	{

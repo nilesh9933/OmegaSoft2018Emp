@@ -70,7 +70,8 @@ public class Products {
 	public String AddProducts(com.JavaMaharashtraAutoService.Model.Products prod) {
 		String message = "";
 		try {
-			PreparedStatement pre = con.prepareStatement("INSERT INTO prodtype (proType,proTypeDes) VALUES (?,?)");
+			PreparedStatement pre = con.prepareStatement("INSERT INTO product (proName,proDes,proTypeId) VALUES (?,?,?)");
+			
 			pre.setString(1, prod.getProName());
 			pre.setString(2, prod.getProDes());
 			pre.setInt(3, prod.getProTypeId());
