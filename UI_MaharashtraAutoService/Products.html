@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MAS - Employee Login Page</title>
+    <title>MAS - Products Page</title>
     <meta name="description" content="Ethanol is an Agency and Personal Portfolio Template built with bootstrap 3.3.2. This is created for a cause to support my uncle's campaign. Go and Donate at - https://life.indiegogo.com/fundraisers/medical-support-for-a-filipino-overseas-worker--3/x/10058181">
     <meta name="keywords" content="portfolio, agency, bootstrap theme, mobile responsive, template, personal">
     <meta name="author" content="ThemeForces.Com">
@@ -64,7 +64,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="#"><img src="img/logo.png" alt="logo" style="height: 65px; width: 200px;"></a>
+              <a href="#"><img src="img/logo.png" alt="logo" style="height: 65px; width: 150px;"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,57 +88,117 @@
     ================================================== -->
     <div id="tf-services">
        <div class="container">
-  	<br><br><br><br>
+  	
+		    <form method="get" action="">
 		    
+		    <div class="section-header">
+  		    	<br><br><br>
+						<h2 style="color:darkorange; "><strong>Products details</strong></h2>
+    			
+  		    		</div>
+
 		    
-		    
-		    
- 		    <div class="col-lg-3"></div>
+ 		    <div class="col-lg-6">
+ 		    	
+   	    				
+    					
+										
+ 					<div class="input-group">
+ 		 				<span class="input-group-addon" id="proId" style="height: 30px;">  Product ID :</span>
+
+  						<input type="text" class="form-control disabled" style="height: 30px;" id="proId" name="proId
+" disabled>
+  					</div>
+  					
+  						    	<br>
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proName">   Name :</span>
+
+  						<input type="text" class="form-control" style="height: 30px;" id="proName" placeholder="Product Name *"  name="proName">
+  					</div>	    	
+  					<br>
+  					<div class="input-group">
+ 		 				<span class="input-group-addon" id="proDes" >  Discription :</span>
+
+  						<textarea class="form-control" id="proDes" placeholder="Product Discription " style="resize: none; height: 80px;" name="proDes"></textarea>
+  					</div>	    	
+ 		    	
+ 		    	<br>
+ 		    	
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proName" >   Purchase Date :</span>
+
+  						<input type="date" class="form-control" id="proPurDate" style="height: 30px;" placeholder="Purchase Date *" name="proPurDate">
+				   </div>		
+					<br>   
+  					
+  					
+  					
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proPurRate" >   Purchase Rate :</span>
+
+  						<input type="text" class="form-control" id="proPurRate" style="height: 30px;" placeholder="Purchase Rate *" name="proPurRate">
+  					</div>
+  					
+  					
+  					
+ 		    </div>
  		    
  		    <div class="col-lg-6">
  		    	
- 		    		<div class="section-header">
-  		    	
-						<h2 style="color:darkorange; "><strong>Employee Login</strong></h2>
-    			
-  		    		</div>
-  		    
-    				<form>
-    
-  					<div class="input-group">
- 		 				<span class="input-group-addon" id="userName"> Username :</span>
-
-  						<input type="text" class="form-control" name="userName" placeholder="Employee Username">
-  					</div>  		
-  					
-    		<br>
-    
-     		<div class="input-group">
-      		
-  <span class="input-group-addon" id="userPass">Password :&nbsp;&nbsp;</span>
-
-  <input type="password" class="form-control" name="userPass" placeholder="Employee Password">
-    		</div>
-    		
-    		<br>
-    		
-    		<div class="text-center">
-    	 	
-    	 			<input type="submit" value="Employee Login" class="btn btn-primary">
-    		
-    		</div>
-   
-   </form>
  		    	
+ 		    	  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proSaleRate" >   Sales Rate :</span>
+
+  						<input type="date" class="form-control" id="proSaleRate" style="height: 30px;" placeholder="Sales Rate *" name="proSaleRate">
+				   </div>		
+					<br>
+ 		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proManDate" >   Manufacturing Date :</span>
+
+  						<input type="text" class="form-control" id="proManDate" style="height: 30px;" placeholder="Manufacturing Date *" name="proManDate">
+				   </div>		
+					<br>
+		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proExpDate" >   Expiry Date :</span>
+
+  						<input type="text" class="form-control" id="proExpDate" style="height: 30px;" placeholder="Expiry Date *" name="proExpDate">
+				   </div>		
+					<br>
+		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="proManComp" >  Manufacture Company :</span>
+
+  						<input type="text" class="form-control" id="proManComp" style="height: 30px;" placeholder="Name of Company *" name="proManComp">
+				   </div>		
+					<br>
+	    	<div class="input-group">
+ 		 				<span class="input-group-addon" id="proWarrPeriod" >  Warrenty Period :</span>
+
+  						<input type="text" class="form-control" id="proWarrPeriod" style="height: 30px;" placeholder="Warrenty Period *" name="proWarrPeriod">
+				   </div>
+				   
+				   		<br>
+	    	<div class="input-group">
+ 		 				<span class="input-group-addon" id="proTypeId" >  Product Type ID :</span>
+
+  						<input type="text" class="form-control" id="proTypeId" style="height: 30px;" placeholder="Product Type ID *" name="proTypeId">
+				   </div>		
+ 		    </div>
+ 		    
+ 		    <div class="row">
+ 		    	
+ 		    <div class="col-lg-12 text-center">
+ 		     		    <br>
+
+ 		    	<input type="submit" class="btn btn-primary" value="Add Product">
+ 		    	
+ 		    	
+ 		    </div>
  		    	
  		    	
  		    </div>
  		    
- 		    <div class="col-lg-3"></div>
- 		    
-  		    
-       </div>
-       <br><br><br><br><br><br><br>
+				</form>
 	</div>
 
 
