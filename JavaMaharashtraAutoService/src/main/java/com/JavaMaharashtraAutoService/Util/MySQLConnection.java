@@ -1,7 +1,6 @@
 package com.JavaMaharashtraAutoService.Util;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 
 import com.JavaMaharashtraAutoService.Model.Log;

@@ -11,11 +11,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.JavaMaharashtraAutoService.Dao.ProductDao;
 import com.JavaMaharashtraAutoService.Dao.Products;
 import com.JavaMaharashtraAutoService.Model.ProductType;
 
 @RestController
-public class ProductsController {
+public class ProductsController 
+{
+	//Products Controller Start for AksProducts.html
+	
+	@RequestMapping(value="/AddProduct",method=RequestMethod.POST)
+	@ResponseBody
+	public String AddProduct(com.JavaMaharashtraAutoService.Model.Products pro)
+	{
+		ProductDao obj=new ProductDao();			
+		return obj.AddProduct(pro);		
+	}
+	
+	//Products Controller End For AksProducts.html
+	
+	
+	
 
 	@CrossOrigin
 	@RequestMapping(value = "/GetProductTypes", method = RequestMethod.GET)

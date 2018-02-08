@@ -6,7 +6,6 @@ public class Products {
 	private int proId;
 	private String proName;
 	private String proDes;
-	private int proTypeId;
 	private Date proPurDate;
 	private float proPurRate;
 	private float proSaleRate;
@@ -14,6 +13,12 @@ public class Products {
 	private Date proExpDate;
 	private String proManComp;
 	private String proWarrPeriod;	
+	private int proTypeId;
+	private String delInd;
+	private String updateUser;
+	private Date updateDate;
+	
+	
 	public Date getProPurDate() {
 		return proPurDate;
 	}
@@ -68,8 +73,6 @@ public class Products {
 	public void setUpdateUser(String updateUser) {
 		this.updateUser = updateUser;
 	}
-	private String delInd;
-	private String updateUser;
 	
 	
 	public int getProId() {
@@ -95,6 +98,12 @@ public class Products {
 	}
 	public void setProTypeId(int proTypeId) {
 		this.proTypeId = proTypeId;
+	}
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 	
 	

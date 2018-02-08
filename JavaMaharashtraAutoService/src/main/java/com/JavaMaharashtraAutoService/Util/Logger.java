@@ -2,8 +2,6 @@ package com.JavaMaharashtraAutoService.Util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.JavaMaharashtraAutoService.Model.Log;
