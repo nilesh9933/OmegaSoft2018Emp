@@ -1,30 +1,71 @@
 
 $(document).ready(function(){
 
-debugger;
-var myRoleData;
+GetModelReady("#btnLogin","#loginModel");
 
-$.ajax({
-	type:"GET",
-	url:"http://localhost:8080/GetUserRoles",
-	success:function (data)
-	{
-	 myRoleData=data;
-	},
-	error:function ()
-	{
-	},
+});
+
+function GetModelReady(ButtonId, modelID) {
+
+    var myWindow = $(modelID);
+    var button = $(ButtonId);
+
+    AlignModelCenter(ButtonId,modelID);
+
+    myWindow.kendoWindow({
+        draggable: false,
+        title: "User Login",
+        maxWidth: "600px",
+        maxHeight: "400px",       
+        visible: false,
+        resizable: false,
+        modal: true,
+        appendTo: "form#index"
+
+    }).data("kendoWindow").center();
+
+}
+
+function AlignModelCenter(ButtonId,modelID){
 	
-});
-//var myRoleData=[{"rolId":1,"rolName":"Admin","rolDes":null,"delInd":null,"updateUser":null,"updateDate":null},{"rolId":2,"rolName":"Super Admin","rolDes":null,"delInd":null,"updateUser":null,"updateDate":null},{"rolId":3,"rolName":"End User","rolDes":null,"delInd":null,"updateUser":null,"updateDate":null},{"rolId":4,"rolName":"Posting Team","rolDes":null,"delInd":null,"updateUser":null,"updateDate":null}]
+ var myWindow = $(modelID);
+ var button = $(ButtonId);
+ button.click(function () {
+ 
+        myWindow.data("kendoWindow").center().open();
+        $(modelID).data('kendoWindow').center();
+        $(modelID).closest(".k-window").css({
+            position: 'fixed',
+            margin: 'auto',
+            top: '20%'
+        });
+    });
+}
 
-
-$("#ddlRole").kendoDropDownList({
-                        dataTextField: "rolName",
-                        dataValueField: "rolId",
-                        dataSource: myRoleData,
-                        index: 0,
-                        //change: fillData
-});
-
-});
+function DoLogin(){
+	
+	var userName=$('#userName').val();
+	var password=$('#userPassword').val();
+	
+	var obj={
+		userName:userName,
+		password:password
+	};
+	
+	$.ajax({
+		type:"POST",
+		url:"http://localhost:28790/Users/Login",
+		data:obj,
+		dataType:"json",
+		success:function(data){
+			debugger;
+		},
+		error:function(e){
+			debugger;
+			console.log(e);
+		}
+		
+	});
+	
+	
+}

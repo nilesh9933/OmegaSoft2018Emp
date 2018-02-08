@@ -14,24 +14,13 @@ namespace DotNetEmploymentTimes.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public String Login(string userName, string password)
         {
-            bool isAuthen = false;
-
-            string str = "";
+            string output = string.Empty;
             Dao.Users obj = new Dao.Users();
-            isAuthen= obj.Login(userName,password);
-
-            if(isAuthen)
-            {
-                str = "Go Ahead";
-            }
-            else
-            {
-                str = "Sorry";
-            }
-            return str;
+            output = obj.Login(userName, password);
+            return output;
         }
     }
 }

@@ -14,9 +14,6 @@ import com.JavaEmploymentTimes.Model.Users;
 
 public class UsersController {
 
-	
-	
-
 		@RequestMapping(value="/AddUser",method=RequestMethod.POST)
 		@ResponseBody
 		public String AddUser(@ModelAttribute ("Users") Users user)

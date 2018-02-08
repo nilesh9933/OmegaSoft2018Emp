@@ -15,12 +15,12 @@ namespace DotNetEmploymentTimes.Dao
         {
             con = MySQLEMPConnection.GetConnection();
         }
-        public bool Login(string userName, string password)
+        public String Login(string userName, string password)
         {
-            bool isAuthen = false;
+            string output = "";
             try
             {
-                using (MySqlCommand cmd = new MySqlCommand("select * from users where userEmail=@userEmail and userPassword=@userPassword",con))
+                using (MySqlCommand cmd = new MySqlCommand("select userFirstName,userLastName,userEmail from users where userEmail=@userEmail and userPassword=@userPassword",con))
                 {
                     con.Open();
                     cmd.Parameters.AddWithValue("@userEmail", userName);
@@ -31,7 +31,7 @@ namespace DotNetEmploymentTimes.Dao
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        isAuthen = true;
+                        output = ds.Tables[0].Rows[0]["userFirstName"].ToString() + "," + ds.Tables[0].Rows[0]["userLastName"].ToString() + "," + ds.Tables[0].Rows[0]["userEmail"].ToString();
                     }
                     da.Dispose();
                     con.Close();
@@ -44,7 +44,7 @@ namespace DotNetEmploymentTimes.Dao
                 throw;
             }
 
-            return isAuthen;
+            return output;
         }
 
     }
