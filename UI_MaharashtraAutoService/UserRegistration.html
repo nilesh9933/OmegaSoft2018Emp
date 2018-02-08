@@ -90,88 +90,178 @@
     ================================================== -->
     <div id="tf-services">
        <div class="container">
-        <style type="text/css">
-		   
-		   .jumbotron
-		   {
-			  background-color:darkgoldenrod !important;
-			}
-		   
-		   </style><br><br>
+  <form method="get" action="">
+		    
+		    <div class="section-header">
+  		    	
+						<h2 style="color:darkorange; "><strong>Employee Details</strong></h2>
+    			
+  		    		</div>
+
+		    
+ 		    <div class="col-lg-6">
  		    	
+   	    				
+    					
+										
+ 					<div class="input-group">
+ 		 				<span class="input-group-addon" id="userId" style="height: 38px;">  User ID :</span>
+
+  						<input type="text" class="form-control disabled" style="height: 38px;" name="userId" disabled>
+  					</div>
+  					
+  						    	<br>
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userFirstName">  First Name :</span>
+
+  						<input type="text" class="form-control" style="height: 38px;" placeholder="First Name *"  name="userFirstName">
+  					</div>	    	
+  					<br>
+  					
+  					 <div class="input-group">
+ 		 				<span class="input-group-addon" id="userLastName">  Last Name :</span>
+
+  						<input type="text" class="form-control" style="height: 38px;" placeholder="Last Name *"  name="userLastName">
+  					</div>	    	
+  					<br>
+  					
+  					
+  					
+  					<div class="input-group">
+ 		 				<span class="input-group-addon" id="userEmail">  Email-ID :</span>
+
+  						<input type="text" class="form-control" style="height: 38px;" placeholder="Email-ID*"  name="userEmail">
+  					</div>	    	
+  					<br>
+  					
+  					
+  					
+  					<div class="input-group">
+ 		 				<span class="input-group-addon" id="userDob"> Date Of Birth :</span>
+
+  						<input type="date" class="form-control" style="height: 38px;" placeholder=" *"  name="userDob">
+  					</div>	    	
+  					<br>
+  					
+  					
+  					<div class="input-group">
+ 		 				<span class="input-group-addon" id="userAddress" >  Address :</span>
+
+  						<textarea class="form-control" placeholder="Address here " style="resize: none; height: 80px;" name="userAddress"></textarea>
+  					</div>	    	
  		    	
- 		    	<div class="jumbotron">
+ 		    	<br>
  		    	
- 		     <div class="row text-center"> <!-- contact form outer row with centered text-->
-                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                    <form id="contact-form" class="form" name="sentMessage" novalidate> <!-- form wrapper -->
+  					
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userContact" > Contact Number :</span>
 
-						<h2 style="color:brown; "><strong>User Registration</strong></h2><br>
-                        <div class="row"> <!-- nested inner row -->
+  						<input type="text" class="form-control" id="proPurDate" style="height: 38px;" placeholder="Contact Number *" name="userContact">
+				   </div>		
+					<br>   
+  					
+  					
+  					
+  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userMob" >  Mobile Number :</span>
 
-                            <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your First Name *" id="firstName" required data-validation-required-message="Please enter your first name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							 <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your last name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your Last Name" id="lastName" >
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                         </div>
-                         <div class="row"> 
-						 <!-- Input your email -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="email" autocomplete="off" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            <!-- Input your Phone no. -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your Phone No. *" id="phone" required data-validation-required-message="Please enter your phone no.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                        </div><!-- end nested inner row -->
-
-                         <div class="row"> 
-                            <!-- Input your email -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="password" autocomplete="off" class="form-control" placeholder="Your Password *" id="password" required data-validation-required-message="Please enter your password">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            <!-- Input your Phone no. -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Your Confirm Password *" id="confPassword" required data-validation-required-message="Please enter your  Confirm Password.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Register</button> <!-- Send button -->
-
-                    </form><!-- end form wrapper -->
-                </div><!-- end col 10 with offset 1 to centered -->
-            </div> <!-- end contact form outer row with centered text-->
-
-		   </div>
+  						<input type="text" class="form-control" id="proPurRate" style="height: 38px;" placeholder="Mobile Number *" name="userMob">
+  					</div>
+  					
+  					
+  					
+ 		    </div>
  		    
-  		    
-       </div>
-	</div>
+ 		    <div class="col-lg-6">
+ 		    	
+ 		    	
+ 		    	  				   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userName" >  Username :</span>
+
+  						<input type="text" class="form-control" id="proSaleRate" style="height: 38px;" placeholder="MAS Username *" name="userName">
+				   </div>		
+					<br>
+ 		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="password" >  Password :</span>
+
+  						<input type="text" class="form-control" id="proManDate" style="height: 38px;" placeholder="MAS Password *" name="password">
+				   </div>		
+					
+	    	   
+	    	   <br>
+	    	   
+	    	   
+	    	   
+	    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userId" style="height: 38px;">  Role ID :</span>
+
+  						<input type="text" class="form-control disabled" style="height: 38px;" name="userId" disabled>
+  					</div>
+  					
+	    	   
+	    	   <br>
+		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userPan" >   PAN Card Number :</span>
+
+  						<input type="text" class="form-control" id="proExpDate" style="height: 38px;" placeholder="PAN Card Number *" name="proExpDate">
+				   </div>		
+					<br>
+	    	   
+		    	   <div class="input-group">
+ 		 				<span class="input-group-addon" id="userAdhar" >  Addhar Card Number :</span>
+
+  						<input type="text" class="form-control" style="height: 38px;" placeholder="Addhar Card Number *" name="userAdhar">
+				   </div>		
+					<br>
+	    	<div class="input-group">
+ 		 				<span class="input-group-addon" id="userWorkExp" >  Work Experiance :</span>
+
+ 						<select name="userWorkExp" style="height: 38px;" class="form-control">
+ 							
+ 							<option value="Fresher">Fresher</option>
+ 							<option value="1-6 Months">1-6 Months</option>
+ 							<option value="6 Months - 1 year">6 Months - 1 year</option>
+ 							<option value="1 Year - 3 Year">1 Year - 3 Year</option>
+ 							<option value="3 Year +">3 Year +</option>
+ 						</select>
+				   </div>
+				   
+				   		<br>
+	    	<div class="input-group">
+ 		 				<span class="input-group-addon" id="userJoiningDate" > Employee Joining Date  :</span>
+
+  						<input type="text" class="form-control" style="height: 38px;" placeholder="Employee Joining Date *" name="proTypeId">
+				   </div>
+				   
+				   
+				   		<br>
+	    	<div class="input-group">
+ 		 				<span class="input-group-addon" id="userResignDate" > Employee Resign Date  :</span>
+
+  						<input type="text" class="form-control" id="userJoiningDate" style="height: 38px;" placeholder="Employee Joining Date *" name="userResignDate">
+				   </div>
+				   
+				   		
+				   				
+				   						
+				   										
+ 		    </div>
+ 		    
+ 		    <div class="row">
+ 		    	
+ 		    <div class="col-lg-12 text-center">
+ 		     		    <br>
+
+ 		    	<input type="submit" class="btn btn-primary" value="Join Employee">
+ 		    	
+ 		    	
+ 		    </div>
+ 		    	
+ 		    	
+ 		    </div>
+ 		    
+				</form>
+		</div>
 
 
     <!-- Contact Section
