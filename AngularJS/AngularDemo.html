@@ -9,17 +9,17 @@
 </head>
 <body>
 
-<div ng-app="myApp">
+<div ng-app="myApp"> <!-- directive which tells angular that this is the root element of app and can have only 1-->
+  
 
-
-<div ng-controller="myController1">
-<input type="text"  placeholder="Enter you first value." ng-model="firstName"/><br>
+<div ng-controller="myController1">  <!--  can write variable,method and object is call as scope-->
+<input type="text"  placeholder="Enter you first value." ng-model="firstName"/><br> <!--model -two way data binding wd view-->
 <input type="text"  placeholder="Enter you second value." ng-model="lastName"/><br>
 
-<ul  ng-repeat="x in names">
+<ul  ng-repeat="x in names"> <!-- repeats a set of HTML, a given number of times.-->
   <li>
     {{x.firstName}}
-  </li>
+  </li> 
 </ul>
 
 <table ng-repeat="x in names" border="1px">
@@ -52,5 +52,4 @@
 </div>
 </body>
 </html>
-
-
+  
