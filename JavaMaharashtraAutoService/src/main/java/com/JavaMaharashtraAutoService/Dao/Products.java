@@ -52,7 +52,7 @@ public class Products {
 		try {
 			PreparedStatement pre = con.prepareStatement("INSERT INTO prodtype (proType,proTypeDes) VALUES (?,?)");
 			pre.setString(1, proType.getProType());
-			pre.setString(2, proType.getProDes());
+			pre.setString(2, proType.getProTypeDes());
 			pre.executeUpdate();
 			message = "Data inserted";
 		} catch (Exception e) {
@@ -70,7 +70,7 @@ public class Products {
 	public String AddProducts(com.JavaMaharashtraAutoService.Model.Products prod) {
 		String message = "";
 		try {
-			PreparedStatement pre = con.prepareStatement("INSERT INTO product (proName,proDes,proTypeId) VALUES (?,?,?)");
+			PreparedStatement pre = con.prepareStatement("INSERT INTO product (proName,proTypeDes,proTypeId) VALUES (?,?,?)");
 			
 			pre.setString(1, prod.getProName());
 			pre.setString(2, prod.getProDes());
