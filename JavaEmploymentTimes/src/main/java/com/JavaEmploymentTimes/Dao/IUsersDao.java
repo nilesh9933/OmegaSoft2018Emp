@@ -6,5 +6,7 @@ public interface IUsersDao {
 	String AddUser(Users users);
 	String UpdateUser(Users roles);
 	String DeleteRole();
+	
+	boolean LoginUser(String Email, String Password);
 
 }

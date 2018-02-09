@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Corlate</title>
-	
-	<!-- core CSS -->
+    
+    <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
@@ -24,12 +24,41 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-	<link rel="stylesheet" href="css/kendo.common-material.min.css" />
-    <link rel="stylesheet" href="css/kendo.material.min.css" />
-    <link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
-	
-	</head><!--/head-->
+
+<link rel="stylesheet" href="css/kendo.common-material.min.css" />
+<link rel="stylesheet" href="css/kendo.material.min.css" />
+<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script>
+ var myData;
+ 
+$.getJSON("http://localhost:9000/GetUserRoles", 
+    function(data) {
+        myData = data;
+        // or use your data here by calling yourFunction(data);
+    }
+);
+
+$(document).ready(function(){
+
+
+$("#myDropDown").kendoDropDownList({
+                        dataTextField: "rolName",
+                        dataValueField:"rolId",
+                        dataSource: myData,
+                        index: 0,
+                                         
+});
+});
+
+
+</script>
+    </head><!--/head-->
 
 <body class="homepage">
 
@@ -72,7 +101,7 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li>
@@ -94,119 +123,35 @@
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-		
+        
     </header><!--/header-->
-
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-
-                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
-    </section><!--/#main-slider-->
 
     <section id="feature" >
         <div class="container">
            <div class="center wow fadeInDown">
-                <h2>Role Assignment</h2>
+                <h2>Assign Role</h2>
            </div>
-		    <div class="row"> 
-                            <div class="col-md-12">
-                                <div class="form-group"> 
-								<div id="ddlRole"></div>
-								<select id="ddlRoles">
-								<option value="1">Admin</option>
-								<option value="2">Super Admin</option>
-								<option value="3">End User</option>
-								<option value="4">Posting Team</option>
-								</select>
-                                </div>
-                            </div>
-							 <div class="col-md-12">
-                                <div class="form-group"> 
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Enter email Id" id="txtEmail" name="txtEmail" required data-validation-required-message="Please enter email id">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							<input type="button" id="btnLogin" onClick="DoLogin();" value="Role Assign" ></button> <!-- Send button -->
-			
-							
-			</div>
-			
-				
+      
+          <div class="col-lg-4 col-md-3 col-sm-1 hidden-xs"></div>
+            <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12">
+                <form  method="POST" action="http://localhost:9000/AddRolesAssignment">
+                     <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Enter the Email" name="userEmail" reqired />
+                    </div>
+                       
 
-							
+                       <div id="myDropDown" >
+                        </div>
+                     
+                     <button type="submit" class="btn btn-primary" style="margin-left:0; " >Submit</button>
+                   
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-1 hidden-xs"></div>
+        </div>
+                    
+
+                            
        </div><!--/.container-->
     </section><!--/#feature-->
 
@@ -300,44 +245,13 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
-	
-    <script src="js/jquery.min.js"></script>
-    <script src="js/kendo.all.min.js"></script>
-	<script src="js/employmentTimes.js"></script>
-	
-	<script>
-	
-	function DoLogin()
-	{
-	var userName=$('#userName').val();
-	var password=$('#password').val();
-	
-	$.ajax({
-	type : "GET",
-    url: "http://localhost:28790/Users/Login?userName="+userName+ "&password="+password,
-    success:function(data)
-{
-debugger;
-if(data)
-{
-location.replace="";
-}
-else
-{
+     
 
-}
-console.log(data);
-},
-error:function (e)
-{
-debugger;
-console.log(e);
-},	
-	
-	
-	});
-	}
-	
-	</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/kendo.all.min.js"></script>
+
+
 </body>
 </html>

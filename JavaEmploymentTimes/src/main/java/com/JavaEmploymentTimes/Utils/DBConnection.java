@@ -13,7 +13,7 @@ public class DBConnection {
 				String driver = "com.mysql.jdbc.Driver";
 				String URL = "jdbc:mysql://localhost:3306/EMPDB";
 				String user = "root";
-				String password = "sa";
+				String password = "dhanu123";
 
 				Class.forName(driver);
 				

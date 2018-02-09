@@ -4,6 +4,8 @@ import java.sql.Connection;
 
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import com.JavaEmploymentTimes.Model.Users;
 import com.JavaEmploymentTimes.Utils.DBConnection;
@@ -61,6 +63,25 @@ public class UserDao implements IUsersDao {
 	public String DeleteRole() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean LoginUser(String Email, String Password) {
+		boolean isAuthen = false;
+		try {
+			Statement stmt = con.createStatement();
+			String sql = "SELECT userEmail,userPassword FROM users where userEmail='" + Email + "'AND userPassword='"
+					+ Password + "'";
+			ResultSet rs = stmt.executeQuery(sql);
+			if (rs.next()) {
+				isAuthen = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return isAuthen;
+
 	}
 
 }
