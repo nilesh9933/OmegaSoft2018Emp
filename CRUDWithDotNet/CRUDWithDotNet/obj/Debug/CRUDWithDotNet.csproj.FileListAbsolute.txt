@@ -1,0 +1,6 @@
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\bin\CRUDWithDotNet.dll.config
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\bin\CRUDWithDotNet.dll
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\bin\CRUDWithDotNet.pdb
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\obj\Debug\CRUDWithDotNet.csprojResolveAssemblyReference.cache
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\obj\Debug\CRUDWithDotNet.dll
+F:\Omega2018DotNet\CRUDWithDotNet\CRUDWithDotNet\obj\Debug\CRUDWithDotNet.pdb

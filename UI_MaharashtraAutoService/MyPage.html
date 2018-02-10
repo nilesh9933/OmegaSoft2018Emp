@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Hello Good Morning</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function MyFunction()
+{
+$.ajax({
+type:"GET",
+url:"http://localhost:31322/api/values",
+contentType: "application/json; charset=utf-8",
+success:function(data)
+{
+$('#txtValue').val(data);
+},
+error:function(e)
+{
+console.log(e);
+},
+});
+
+}
+</script>
+
+</head>
+<body>
+
+<input type="button" value="Click Me" onclick="MyFunction();">
+<input id="txtValue" type="text" />
+
+</body>
+</html>
