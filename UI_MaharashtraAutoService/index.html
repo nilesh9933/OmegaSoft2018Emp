@@ -44,7 +44,42 @@
   </head>
   <body>
 
-    <div id="header"></div>
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html"><img src="img/logo.png" alt="logo" style="height: 65px; width: 200px;"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="mHome"><a href="index.html" class="scroll">Home</a></li>
+                <li id="mRoles"><a href="Role.html" class="scroll">Add User Roles</a></li>
+                <li id="mJobs"><a href="#" class="scroll">Add Jobs</a></li>
+                <li id="mProdType"><a href="ProductType.html" class="scroll">Add Product Types</a></li>
+                <li id="mProd"><a href="Product.html" class="scroll">Add Product</a></li>
+                <li id="mEmpDetails"><a href="#" class="scroll">Add Employee Details</a></li>
+                <li id="mOffers"><a href="offer.html" class="scroll">Add Offers and Coupons</a></li>
+                <li id="mInventory"><a href="#" class="scroll">Manage Inventory</a></li>
+                <li id="mEngAssignment"><a href="#" class="scroll">Engineer Assignments</a></li>
+                <li id="mInvoice"><a href="#" class="scroll">Invoice and Bill Generation</a></li>
+                <li id="mReports"><a href="#" class="scroll">Reports</a></li>
+                <li id="mPayments"><a href="#" class="scroll">Payments</a></li>
+                <li id="mAbout"><a href="#" class="scroll">Aboutus</a></li>
+                <li id="mContactus"><a href="#" class="scroll">Contactus</a></li>
+                <li id="mRegistration"><a href="UserRegistration.html" class="scroll">Registration</a></li>
+                <li id="mLogin"><input type="button" id="btnLogin" value="Login" class="scroll" /></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
     <!-- Home Section
     ================================================== -->
@@ -98,25 +133,49 @@
     
     <!-- Footer 
     ================================================== -->
-    <div id="footer">
-        
-    </div>
+    <div id="tf-footer">
+    <div class="container">
+        <!-- container -->
+        <p class="pull-left">© 2018 ethanol. All rights reserved. Theme by Rudhi Sasmito.</p> <!-- copyright text here-->
+        <ul class="list-inline social pull-right">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link -->
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li> <!-- Change # With your Dribbble Link -->
+            <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link -->
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li> <!-- Change # With your Youtube Link -->
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li> <!-- Change # With your Pinterest Link -->
+        </ul>
+    </div><!-- end container -->
+</div>
+
     
     <div id="loginModel">
-  		    <div class="section-header">  		    	
-				<h2 class="highlight"><strong>Employee Login</strong></h2>
-    		
-  		    </div>
-  		    
-    		
-    <div class="form-group">
-      <input type="email" class="form-control" id="userEmail" placeholder="Please enter email or user name"/>
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" id="userPassword" placeholder="Please enter your password"/>
-    </div>
-   
-    <button type="button" class="btn btn-success">Login</button>
+  		   
+           <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-8"> <!-- col 10 with offset 1 to centered -->
+                    
+                        <div class="row"> <!-- nested inner row -->
+
+                            <!-- Input your name -->
+                            <div class="col-md-12">
+                                <div class="form-group"> <!-- Your first name input -->
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Enter user email *" id="userEmail" name="userEmail" required data-validation-required-message="Please enter your email id">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+							 <!-- Input your name -->
+                            <div class="col-md-12">
+                                <div class="form-group"> 
+								 <input type="password" autocomplete="off" class="form-control" placeholder="Enter password" id="userPassword" name="userPassword" required data-validation-required-message="Please enter your password"></textarea>
+                                </div>
+                            </div>
+                         </div>                            
+                        <button type="button" class="btn btn-primary tf-btn color" onclick="DoLogin();">Login</button> <!-- Send button -->
+
+                </div><!-- end col 10 with offset 1 to centered -->
+          
   
     </div>
 

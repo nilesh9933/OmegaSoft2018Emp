@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ethanol Portfolio Template - Index Default</title>
+    <title>MAS- User Roles Entry</title>
     <meta name="description" content="Ethanol is an Agency and Personal Portfolio Template built with bootstrap 3.3.2. This is created for a cause to support my uncle's campaign. Go and Donate at - https://life.indiegogo.com/fundraisers/medical-support-for-a-filipino-overseas-worker--3/x/10058181">
     <meta name="keywords" content="portfolio, agency, bootstrap theme, mobile responsive, template, personal">
     <meta name="author" content="ThemeForces.Com">
@@ -85,46 +85,30 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <!-- Home Section
-    ================================================== -->
-    <div id="tf-home">
-        <div class="overlay"> <!-- Overlay Color -->
-            <div class="container"> <!-- container -->
-                <div class="content-heading text-center"> <!-- Input Your Home Content Here -->
-                    <h1>Websites / Branding / Interactive</h1>
-                    <p class="lead">We create beautiful, innovative and  effective handcrafted brands & website.</p>
-                    <a href="#tf-works" class="scroll goto-btn text-uppercase">View Our Works</a> <!-- Link to your portfolio section -->
-                </div><!-- End Input Your Home Content Here -->
-            </div> <!-- end container -->
-        </div><!-- End Overlay Color -->
-    </div>
 
     <!-- Contact Section
     ================================================== -->
     <div id="tf-contact">
-
-           
-
         <div class="container"><!-- container -->            
 
             <div class="row text-center"> <!-- contact form outer row with centered text-->
                 <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                    <form id="contact-form" class="form" name="sentMessage" novalidate> <!-- form wrapper -->
+                    <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddRole"> <!-- form wrapper -->
 
-					<h2>Roles</h2>
+					<h2>Add Roles</h2>
                         <div class="row"> <!-- nested inner row -->
 
                             <!-- Input your name -->
                             <div class="col-md-12">
                                 <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Role Name *" id="rolName" required data-validation-required-message="Please enter role name.">
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Role Name *" id="rolName" name="rolName" required data-validation-required-message="Please enter role name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
 							 <!-- Input your name -->
                             <div class="col-md-12">
                                 <div class="form-group"> 
-								 <textarea class="form-control" rows="7" placeholder="Role Description" id="rolDes" required data-validation-required-message="Please enter role description."></textarea>
+								 <textarea class="form-control" rows="7" placeholder="Role Description" id="rolDes" name="rolDes" required data-validation-required-message="Please enter role description."></textarea>
                                    
                                 </div>
                             </div>
@@ -159,9 +143,7 @@
     
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+   <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
@@ -180,9 +162,6 @@
     <!-- LightBox Nivo -->
     <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
 
-    <!-- Contact page-->
-    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="js/contact.js"></script>
 
     <!-- Javascripts
     ================================================== -->

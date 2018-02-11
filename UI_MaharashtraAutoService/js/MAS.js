@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	$.ajax({		
+GetModelReady("#btnLogin","#loginModel");
+
+	/*$.ajax({		
 		type:"GET",
 		url:"http://localhost:28790/Header/Header",
 		success:function(viewHtml){	
@@ -23,7 +25,7 @@ $(document).ready(function(){
 		error:function(e){			
 			console.log(e);
 		}		
-	});
+	});*/
 	
 	
 });
@@ -34,6 +36,7 @@ $(document).ready(function(){
 
 function GetModelReady(ButtonId, modelID) {
 
+debugger;
     var myWindow = $(modelID);
     var button = $(ButtonId);
 
@@ -42,8 +45,8 @@ function GetModelReady(ButtonId, modelID) {
     myWindow.kendoWindow({
         draggable: false,
         title: "User Login",
-		minWidth:"500px",
-        maxWidth: "800px",
+		minWidth:"300px",
+        maxWidth: "500px",
         maxHeight: "400px",       
         visible: false,
         resizable: false,
@@ -68,4 +71,32 @@ function AlignModelCenter(ButtonId,modelID){
             top: '20%'
         });
     });
+}
+
+
+function DoLogin(){
+	debugger;
+	var userName=$('#userEmail').val();
+	var password=$('#userPassword').val();
+	
+	var obj={
+		userName:userName,
+		password:password
+	};
+	
+	$.ajax({
+		type:"POST",
+		url:"http://localhost:9000/Login",
+		data:JSON.stringify(obj),
+		contentType: "application/json; charset=utf-8",
+        dataType: "json",
+		success:function(data){
+			debugger;
+		},
+		error:function(e){
+			debugger;
+			console.log(e);
+		}
+		
+	});	
 }

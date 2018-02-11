@@ -48,6 +48,14 @@
     <![endif]-->
 	
 	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	
+	<style>
+	
+	.k-widget.k-dropdown.k-header.form-group
+	{
+	width:100%;
+	}
+	</style>
   </head>
   <body>
 
@@ -100,7 +108,18 @@
 
                             <!-- Input your name -->
                       
-							
+							<div class="col-md-6">
+                                <div id="dropdown" class="form-group"> <!-- Your first name input -->
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
 							<div class="col-md-6">
                                 <div class="form-group"> <!-- Your first name input -->
                                     <input type="text" autocomplete="off" class="form-control" placeholder="Product Name *" id="proName" name="proName" required data-validation-required-message="Please enter role name.">
@@ -167,18 +186,13 @@
                             </div>
 							
 							
-							<div class="col-md-6">
-                                <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Product TypeID *" id="proTypeId" name="proTypeId" required data-validation-required-message="Please enter role name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
+							
 							
 							
 							
 							
                          </div>                            
-                        <input type="submit" value="Submit"></input> <!-- Send button -->
+                        <input type="submit" value="Submit"> <!-- Send button -->
 
                     </form><!-- end form wrapper -->
                 </div><!-- end col 10 with offset 1 to centered -->
@@ -209,7 +223,6 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -218,8 +231,7 @@
 
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
 
-    <!-- Google Map -->
-    <script type="text/javascript" src="js/map.js"></script>
+
 
     <!-- Parallax Effects -->
     <script type="text/javascript" src="js/skrollr.js"></script>
@@ -235,9 +247,49 @@
     <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
     
 
-    <!-- Javascripts
-    ================================================== -->
-    <script type="text/javascript" src="js/main.js"></script>
+    
+      
+      
+      
+  <link rel="stylesheet" href="css/kendo.common-material.min.css">
+  <link rel="stylesheet" href="css/kendo.material.min.css">
+  <link rel="stylesheet" href="css/kendo.material.mobile.min.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/kendo.all.min.js"></script>
+      
+       <script>
+$(document).ready(function(){
+  
+  $.ajax({
+  type:"GET",
+  url:"http://localhost:9000/GetProductTypes",
+  success:function(data)
+  {
+  debugger;
+   $('#dropdown').kendoDropDownList({
+   dataSource:data,
+   dataTextField:"proType",
+   dataValueField:"proTypeId",
+  
+  });
+  
+  },
+  error:function(e)
+  {
+    debugger;
+  console.log(e);
+  }
+  
+  });
+  
+  });
+  
+</script> 
+      
+      
+      
+      
 
   </body>
 </html>
