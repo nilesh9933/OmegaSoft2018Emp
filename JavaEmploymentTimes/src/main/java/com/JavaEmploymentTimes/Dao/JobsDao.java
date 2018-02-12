@@ -3,9 +3,14 @@ package com.JavaEmploymentTimes.Dao;
 import java.sql.Connection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.JavaEmploymentTimes.Model.Jobs;
 import com.JavaEmploymentTimes.Utils.DBConnection;
+
 
 public class JobsDao implements IJobsDao{
 	private Connection con;
@@ -55,6 +60,38 @@ public class JobsDao implements IJobsDao{
 	public String DeleteJobs() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public List<Jobs> GetGovJobList()
+	{
+		List<Jobs> jobList=new ArrayList<Jobs>();
+		
+		try
+		{
+			String sql="SELECT jobId, jobTitle, jobType,jobLogoPath \r\n" + 
+					   "FROM empdb.jobs where delInd='N' and jobType='Government'";
+		
+			Statement st = con.createStatement();			
+			ResultSet rs = st.executeQuery(sql);
+			
+			while (rs.next()) {	
+				
+				Jobs obj=new Jobs();				
+				obj.setJobId(Integer.parseInt( rs.getString("jobId")));
+				obj.setJobTitle(rs.getString("jobTitle"));
+				obj.setJobType(rs.getString("jobType"));
+				obj.setJobLogoPath(rs.getString("jobLogoPath"));
+				
+				jobList.add(obj);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return jobList;
+		
 	}
 
 }

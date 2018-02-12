@@ -8,11 +8,10 @@ public class Subscriptions {
 	private String subDes;
 	private String subStartDate;
 	private String subEndDate;
-	private String subAmount;
+	private int subAmount;
 	private String subValidFor;
 	private String subTimeDuration;
-private String ipAddress;
-	
+    private String ipAddress;	
 	private String delInd;
 	private String updateUser;
 	private Date updateDate;
@@ -47,10 +46,10 @@ private String ipAddress;
 	public void setSubEndDate(String subEndDate) {
 		this.subEndDate = subEndDate;
 	}
-	public String getSubAmount() {
+	public int getSubAmount() {
 		return subAmount;
 	}
-	public void setSubAmount(String subAmount) {
+	public void setSubAmount(int subAmount) {
 		this.subAmount = subAmount;
 	}
 	public String getSubTimeDuration() {

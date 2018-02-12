@@ -75,21 +75,22 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+						<li class="active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">JOBS <i class="fa fa-angle-down"></i></a></li>
                             <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
+                                <li><a href="Jobs.html">Government Jobs</a></li>
+                                <li><a href="pricing.html">Private Jobs</a></li>
+                                <li><a href="404.html">Defence Jobs</a></li>
+                                <li><a href="shortcodes.html">Bank Jobs</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="UserRegistration.html">Registration</a></li> 
-                        <li><a href="contact-us.html">Contact</a></li>                        
+                        <li><a href="UserRegistration.html">Registration</a></li> 
+                        <li><a href="Epaperpost.html">Epaperposting </a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-        
+        s
     </header><!--/header-->
 	
 	
@@ -98,86 +99,64 @@
             <div class="row text-center"> <!-- contact form outer row with centered text-->
                 <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
                    
-<form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:8080/AddSubscription "> <!-- form wrapper -->
-					<h2>User Subscription</h2>
+     <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddJobs "> <!-- form wrapper -->
+					<h2>Jobs Posting  </h2>
                         <div class="row"> <!-- nested inner row -->
 
                             <!-- Input your name -->
                             <div class="col-md-6">
                                 <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Subscription Name *" id="subName" name="subName" required data-validation-required-message="Please enter your first name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							 <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your last name input -->
-                                 <textarea style="width:500px;height:50px;" autocomplete="off" class="form-control" placeholder="description" id="subDes" name="subDes"></textarea>
-									<p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                         </div>
-                         <div class="row"> 
-						 <!-- Input your email -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-							<!--	<input placeholder="StartDate*" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">-->
-                                   <input type="text" autocomplete="off" class="form-control" placeholder="subStartDate *" id="subStartDate" name="subStartDate"onfocus="(this.type='date')" onblur="(this.type='text')"  required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            
-
-
-                        
-
-                         
-                            <!-- Input your password -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                  <input type="text" autocomplete="off" class="form-control" placeholder="subEndDate *" id="subEndDate" name="subEndDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Please enter Job's Title" id="jobTitle" name="jobTitle" required data-validation-required-message="Please enter job title.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
 							
-							</div>
-				        			<div class="row"> 
-							 <!-- Input your Phone no. -->
+							<div class="col-md-6">
+                                <div class="form-group"> <!-- Your email input -->
+                                    <input type="Text" autocomplete="off" class="form-control" placeholder="Please enter Job's Type Ex. Government/Private" id="jobType" name="jobType" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+							 
+                         </div>
+                         <div class="row"> 
+                            <div class="col-md-12">
+                                <div class="form-group"> 
+								 <textarea class="form-control" rows="7" placeholder="Please enter Job's Description" id="jobDes" name="jobDes" required data-validation-required-message="Please enter Job's Description"></textarea>
+                                   
+                                </div>
+                            </div>							
+						</div>
+				        <div class="row"> 
                             <div class="col-md-6">
                                 <div class="form-group"> <!-- Your email input -->
-                                   <input type="text" autocomplete="off" class="form-control" placeholder="subAmount *" id="subAmount" name="subAmount" required data-validation-required-message="Please enter your phone no.">
+                                  <input type="text" autocomplete="off" class="form-control" placeholder="Job Start Date *" id="jobStartDate" name="jobStartDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-
-                          
-							<!-- Input your name -->
                             <div class="col-md-6">
+                                <div class="form-group"> <!-- Your email input -->
+                                   <input type="text" autocomplete="off" class="form-control" placeholder="Job End Date*" id="jobEndDate" name="jobEndDate" onfocus="(this.type='date')" onblur="(this.type='text')"required data-validation-required-message="Please enter your phone no.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+						</div>
+						<div class="row">
+						   <div class="col-md-12">
                                 <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="subValidFor *" id="subValidFor" name="subValidFor" required data-validation-required-message="Please enter your first name.">
-                                    <p class="help-block text-danger"></p>
+								
+
+                                <input id="jobLogoPath" type="file" class="form-control" name="jobLogoPath" placeholder="jobLogoPath" required="" capture>
+                                    
+                                <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-							</div>
-							<div class="row"> 
-							 <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your last name input -->
-                                    <select name="subTimeDuration" type="Text" autocomplete="off" class="form-control" placeholder="subTimeDuration" id="subTimeDuration" name="subTimeDuration">
-                                   
-                                     <option value="Weekly">Weekly</option>
-                                     <option value="Monthly">Monthly</option>
-                                    <option value="Yearly">Yearly</option>
-                                     <option value="Two Years">Two Years</option>
-                                    </select>
-								   <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
+							
+							
                          </div>
                          
                           <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary tf-btn color">submit</button> <!-- Send button -->
+                        <button type="submit" class="btn btn-primary tf-btn color">Submit</button> <!-- Send button -->
 </div>
                     </form><!-- end form wrapper -->
 					
@@ -188,7 +167,7 @@
 
     </div>
 	
-	
+
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
