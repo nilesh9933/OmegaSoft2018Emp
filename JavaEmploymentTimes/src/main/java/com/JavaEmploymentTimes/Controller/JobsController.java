@@ -1,5 +1,7 @@
 package com.JavaEmploymentTimes.Controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,18 @@ public class JobsController {
 	{
 		JobsDao obj=new JobsDao();			
 		return obj.AddJobs(jobs);
+	}
+	
+	@RequestMapping(value="/GetGovJobs",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Jobs> GetGovJobList()
+	{
+		List<Jobs> jobList=null;
+		
+		JobsDao obj=new JobsDao();	
+		jobList = obj.GetGovJobList();
+		
+		return jobList;
 	}
 
 }

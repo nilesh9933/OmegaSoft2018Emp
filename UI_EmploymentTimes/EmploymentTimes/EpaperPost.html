@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>EmployementTimes</title>
-    
-    <!-- core CSS -->
+    <title>Home | Corlate</title>
+	
+	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -24,9 +23,14 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
 
-<body>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href="Style/css/bootstrap.css" rel="stylesheet">
+
+	
+	</head><!--/head-->
+
+<body class="homepage">
 
     <header id="header">
         <div class="top-bar">
@@ -67,10 +71,10 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                
+				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
@@ -83,112 +87,76 @@
                                 <li><a href="shortcodes.html">Shortcodes</a></li>
                             </ul>
                         </li>
-                        <li class="active"><a href="UserRegistration.html">Registration</a></li> 
+                        <li><a href="blog.html">Blog</a></li> 
                         <li><a href="contact-us.html">Contact</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-        
+		
     </header><!--/header-->
-	
-	
-	        <div class="container"><!-- container -->            
 
-            <div class="row text-center"> <!-- contact form outer row with centered text-->
-                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
+   
+
+    <section id="feature" style="background-color: white">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                    <h2>Add EPaper</h2>
+            </div>
+		    
+             <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-10 col-md-offset-1">
+                <form  method="POST" action="http://localhost:9000/AddEpaperPost">
                    
-<form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:8080/AddSubscription "> <!-- form wrapper -->
-					<h2>User Subscription</h2>
-                        <div class="row"> <!-- nested inner row -->
+                     <div class="row">
+                         <div class="col-md-6">
+                     <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Paper Name" name="pTitle" reqired />
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="textarea" class="form-control" name="pDes" placeholder="Enter discription" >
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                     
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="pPostDate" placeholder="Enter Paper Post Date" >
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="pStartDate" placeholder="Enter  Start Date" >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                     
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="pEndDate" placeholder="Enter End  Date" >
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="file" class="form-control" name="pSharePath" placeholder="Share path" >
+                    </div>
+                </div>
+            </div>
+                     <button type="submit" class="btn btn-primary" style="margin-left:0;">Submit</button>
+                   
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-1 hidden-xs"></div>
+      			</div>	
 
-                            <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Subscription Name *" id="subName" name="subName" required data-validation-required-message="Please enter your first name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							 <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your last name input -->
-                                 <textarea style="width:500px;height:50px;" autocomplete="off" class="form-control" placeholder="description" id="subDes" name="subDes"></textarea>
-									<p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                         </div>
-                         <div class="row"> 
-						 <!-- Input your email -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-							<!--	<input placeholder="StartDate*" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">-->
-                                   <input type="text" autocomplete="off" class="form-control" placeholder="subStartDate *" id="subStartDate" name="subStartDate"onfocus="(this.type='date')" onblur="(this.type='text')"  required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-
-                            
-
-
-                        
-
-                         
-                            <!-- Input your password -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                  <input type="text" autocomplete="off" class="form-control" placeholder="subEndDate *" id="subEndDate" name="subEndDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
 							
-							</div>
-				        			<div class="row"> 
-							 <!-- Input your Phone no. -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                   <input type="text" autocomplete="off" class="form-control" placeholder="subAmount *" id="subAmount" name="subAmount" required data-validation-required-message="Please enter your phone no.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
+       </div><!--/.container-->
+    </section><!--/#feature-->
 
-                          
-							<!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="subValidFor *" id="subValidFor" name="subValidFor" required data-validation-required-message="Please enter your first name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							</div>
-							<div class="row"> 
-							 <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your last name input -->
-                                    <select name="subTimeDuration" type="Text" autocomplete="off" class="form-control" placeholder="subTimeDuration" id="subTimeDuration" name="subTimeDuration">
-                                   
-                                     <option value="Weekly">Weekly</option>
-                                     <option value="Monthly">Monthly</option>
-                                    <option value="Yearly">Yearly</option>
-                                     <option value="Two Years">Two Years</option>
-                                    </select>
-								   <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                         </div>
-                         
-                          <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary tf-btn color">submit</button> <!-- Send button -->
-</div>
-                    </form><!-- end form wrapper -->
-					
-                </div><!-- end col 10 with offset 1 to centered -->
-            </div> <!-- end contact form outer row with centered text-->
-
-        </div><!-- end container -->
-
-    </div>
-	
-	
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
@@ -279,5 +247,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+
 </body>
 </html>

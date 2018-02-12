@@ -16,6 +16,17 @@ public class Users {
 	private String userAddress;
 	private String userArea;
 	private String userCity;
+	private String userState;
+	private String userCountry;
+	private Date userDob;
+	private String userImagePath;
+	private int rolId;
+	private String ipAddress;
+	private String isActive;
+	private String delInd;
+	private String updateUser;
+	private Date updateDate;
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -135,20 +146,7 @@ public class Users {
 	}
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
-	}
-	private String userState;
-	private String userCountry;
-	private Date userDob;
-	private String userImagePath;
-	private int rolId;
-	private String ipAddress;
-	private String isActive;
-	private String delInd;
-	private String updateUser;
-	private Date updateDate;
-	
-	
-	
+	}	
 	
 
 }

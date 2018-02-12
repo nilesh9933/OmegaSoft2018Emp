@@ -29,7 +29,7 @@ public class SubscriptionsDao implements ISubscriptionsDao{
 			pre.setString(3, subscriptions.getSubDes());
 			pre.setString(4, subscriptions.getSubStartDate());
 			pre.setString(5, subscriptions.getSubEndDate());
-			pre.setString(6,subscriptions.getSubAmount());
+			pre.setInt(6,subscriptions.getSubAmount());
 			pre.setString(7, subscriptions.getSubValidFor());
 			pre.setString(8, subscriptions.getSubTimeDuration());
 			pre.setString(9,"N");

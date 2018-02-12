@@ -92,6 +92,10 @@ function DoLogin(){
         dataType: "json",
 		success:function(data){
 			debugger;
+			
+			$('#loginModel').data("kendoWindow").close();
+			sessionStorage.setItem("Email", data.email);
+			sessionStorage.setItem("Role", data.role);
 		},
 		error:function(e){
 			debugger;
