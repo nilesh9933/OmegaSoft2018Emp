@@ -2,6 +2,7 @@ package com.JavaEmploymentTimes.Controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.JavaEmploymentTimes.Dao.JobsDao;
 import com.JavaEmploymentTimes.Model.Jobs;
 @RestController
 public class JobsController {
+	@CrossOrigin(origins = "*")
 
 	@RequestMapping(value="/AddJobs",method=RequestMethod.POST)
 	@ResponseBody
@@ -21,7 +23,7 @@ public class JobsController {
 		JobsDao obj=new JobsDao();			
 		return obj.AddJobs(jobs);
 	}
-	
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value="/GetGovJobs",method=RequestMethod.GET)
 	@ResponseBody
 	public List<Jobs> GetGovJobList()
@@ -34,4 +36,52 @@ public class JobsController {
 		return jobList;
 	}
 
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value="/GetPrivateJobs",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Jobs> GetPrivateJobList()
+	{
+		List<Jobs> jobList=null;
+		
+		JobsDao obj=new JobsDao();	
+		jobList = obj.GetPrivateJobList();
+		
+		return jobList;
+	}
+
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value="/GetDefenceJobs",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Jobs> GetDefenceJobList()
+	{
+		List<Jobs> jobList=null;
+		
+		JobsDao obj=new JobsDao();	
+		jobList = obj.GetDefenceJobList();
+		
+		return jobList;
+	}
+	
+	
+	
+	
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value="/GetBankJobs",method=RequestMethod.GET)
+	@ResponseBody
+	public List<Jobs> GetBankJobList()
+	{
+		List<Jobs> jobList=null;
+		
+		JobsDao obj=new JobsDao();	
+		jobList = obj.GetBankJobList();
+		
+		return jobList;
+	}
+	
+	
+	
+	
+	
+	
+	
 }
