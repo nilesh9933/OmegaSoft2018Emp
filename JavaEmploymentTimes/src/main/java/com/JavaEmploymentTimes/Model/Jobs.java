@@ -15,6 +15,7 @@ public class Jobs {
 	private String ipAddress;
 	private String updateUser;
 	private Date updateDate;
+
 	public int getJobId() {
 		return jobId;
 	}

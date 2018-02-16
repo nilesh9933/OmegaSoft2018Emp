@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EmployementTimes- Subscriptions</title>
+    
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+
+   <div id="header"></div>
+	
+	        <div class="container"><!-- container -->            
+
+            <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
+                   
+<form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddSubscription "> <!-- form wrapper -->
+					<h2>User Subscription</h2>
+                        <div class="row"> <!-- nested inner row -->
+
+                            <!-- Input your name -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your first name input -->
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Subscription Name *" id="subName" name="subName" required data-validation-required-message="Please enter your first name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+							 <!-- Input your name -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your last name input -->
+                                 <textarea style="width:500px;height:50px;" autocomplete="off" class="form-control" placeholder="Description" id="subDes" name="subDes"></textarea>
+									<p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="row"> 
+						 <!-- Input your email -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your email input -->
+							<!--	<input placeholder="StartDate*" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">-->
+                                   <input type="text" autocomplete="off" class="form-control" placeholder="Sub Start Date *" id="subStartDate" name="subStartDate"onfocus="(this.type='date')" onblur="(this.type='text')"  required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            
+
+
+                        
+
+                         
+                            <!-- Input your password -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your email input -->
+                                  <input type="text" autocomplete="off" class="form-control" placeholder="Sub End Date *" id="subEndDate" name="subEndDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+							
+							</div>
+				        			<div class="row"> 
+							 <!-- Input your Phone no. -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your email input -->
+                                   <input type="text" autocomplete="off" class="form-control" placeholder="Sub Amount *" id="subAmount" name="subAmount" required data-validation-required-message="Please enter your phone no.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                          
+							<!-- Input your name -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your first name input -->
+                                    <input type="text" autocomplete="off" class="form-control" placeholder="Sub Valid For Eg.(1,2... etc.) *" id="subValidFor" name="subValidFor" required data-validation-required-message="Please enter your first name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+							</div>
+							<div class="row"> 
+							 <!-- Input your name -->
+                            <div class="col-md-6">
+                                <div class="form-group"> <!-- Your last name input -->
+                                    <select name="subTimeDuration" type="Text" autocomplete="off" class="form-control" placeholder="subTimeDuration" id="subTimeDuration" name="subTimeDuration">
+                                   
+                                     <option value="Weekly">Weekly</option>
+                                     <option value="Monthly">Monthly</option>
+                                    <option value="Yearly">Yearly</option>
+                                     <option value="Two Years">Two Years</option>
+                                    </select>
+								   <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                         </div>
+                         
+                          <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary tf-btn color">submit</button> <!-- Send button -->
+</div>
+                    </form><!-- end form wrapper -->
+					
+                </div><!-- end col 10 with offset 1 to centered -->
+            </div> <!-- end contact form outer row with centered text-->
+
+        </div><!-- end container -->
+
+    </div>
+	
+	
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                            <li><a href="#">Ticket system</a></li>
+                            <li><a href="#">Billing system</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">SEO Marketing</a></li>
+                            <li><a href="#">Theme</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Email Marketing</a></li>
+                            <li><a href="#">Plugin Development</a></li>
+                            <li><a href="#">Article Writing</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Partners</h3>
+                        <ul>
+                            <li><a href="#">Adipisicing Elit</a></li>
+                            <li><a href="#">Eiusmod</a></li>
+                            <li><a href="#">Tempor</a></li>
+                            <li><a href="#">Veniam</a></li>
+                            <li><a href="#">Exercitation</a></li>
+                            <li><a href="#">Ullamco</a></li>
+                            <li><a href="#">Laboris</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <div id="footer"></div>
+
+    <link rel="stylesheet" href="css/kendo.common-material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+  <script src="js/kendo.all.min.js"></script>
+	<script src="js/employmentTimes.js"></script>
+</body>
+</html>
