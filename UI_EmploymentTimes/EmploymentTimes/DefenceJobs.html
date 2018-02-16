@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>This is first Angular page
+</title>
+
+<script src="js/angular.min.js"></script>
+<script src="js/MyJavaScript2.js"></script>
+
+</head>
+<body>
+
+<div ng-app="defenceApp"> 
+  
+
+<div ng-controller="defenceController"> 
+
+<table ng-repeat="x in jobList" border="1px">
+
+<tbody>
+<tr>
+<td style="width:100px">
+{{x.jobId}}
+</td>
+<td style="width:100px">
+{{x.jobTitle}}
+</td>
+<td style="width:100px">
+{{x.jobType}}
+</td>
+<td style="width:100px">
+{{x.jobLogoPath}}
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</body>
+</html>
+  
