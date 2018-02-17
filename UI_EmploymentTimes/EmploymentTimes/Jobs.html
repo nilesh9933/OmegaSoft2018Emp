@@ -7,24 +7,19 @@
     <meta name="author" content="">
     <title>EmployementTimes</title>
     
-    <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+         
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+</head>
 
 <body>
 
@@ -53,8 +48,8 @@
                        </div>
                     </div>
                 </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
+            </div>
+        </div>
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
@@ -88,85 +83,79 @@
                         <li><a href="Epaperpost.html">Epaperposting </a></li>                        
                     </ul>
                 </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-        s
-    </header><!--/header-->
+            </div>
+        </nav>
+        
+    </header>
 	
 	
-	        <div class="container"><!-- container -->            
-
-            <div class="row text-center"> <!-- contact form outer row with centered text-->
-                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
-                   
-     <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddJobs "> <!-- form wrapper -->
-					<h2>Jobs Posting  </h2>
-                        <div class="row"> <!-- nested inner row -->
-
-                            <!-- Input your name -->
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your first name input -->
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Please enter Job's Title" id="jobTitle" name="jobTitle" required data-validation-required-message="Please enter job title.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+	<div class="container"> 
+			
+        <div class="row text-center">
+          <div class="col-md-10 col-md-offset-1">
+             <h2>Jobs Posting  </h2>      
+			<form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddJobs "> <!-- form wrapper -->
+				
+                    <div class="row">
+						<div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" autocomplete="off" class="form-control" placeholder="Please enter Job's Title" id="jobTitle" name="jobTitle" required data-validation-required-message="Please enter job title.">
+                                 <p class="help-block text-danger"></p>
                             </div>
+                        </div>
 							
-							<div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                    <input type="Text" autocomplete="off" class="form-control" placeholder="Please enter Job's Type Ex. Government/Private" id="jobType" name="jobType" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+						<div class="col-md-6">
+                            <div class="form-group">
+                                <select type="Text" autocomplete="off" class="form-control" placeholder="Please enter Job's Type Ex. Government/Private" id="jobType" name="jobType" required data-validation-required-message="Please Select Job's Type Ex. Government,Private etc.">
+                                <option value="Government">Government</option>
+                                <option value="Private">Private</option>
+                                <option value="Defence">Defence</option>
+                                <option value="Bank">Bank</option>
+								</select>
+								<p class="help-block text-danger"></p>
                             </div>
-							 
-                         </div>
-                         <div class="row"> 
-                            <div class="col-md-12">
-                                <div class="form-group"> 
-								 <textarea class="form-control" rows="7" placeholder="Please enter Job's Description" id="jobDes" name="jobDes" required data-validation-required-message="Please enter Job's Description"></textarea>
-                                   
-                                </div>
-                            </div>							
-						</div>
-				        <div class="row"> 
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                  <input type="text" autocomplete="off" class="form-control" placeholder="Job Start Date *" id="jobStartDate" name="jobStartDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                        </div>
+					</div>
+                        
+					<div class="row"> 
+                        <div class="col-md-12">
+                            <div class="form-group"> 
+							 <textarea class="form-control" rows="7" placeholder="Please enter Job's Description" id="jobDes" name="jobDes" required data-validation-required-message="Please enter Job's Description"></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group"> <!-- Your email input -->
-                                   <input type="text" autocomplete="off" class="form-control" placeholder="Job End Date*" id="jobEndDate" name="jobEndDate" onfocus="(this.type='date')" onblur="(this.type='text')"required data-validation-required-message="Please enter your phone no.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-						</div>
-						<div class="row">
-						   <div class="col-md-12">
-                                <div class="form-group"> <!-- Your first name input -->
-								
-
-                                <input id="jobLogoPath" type="file" class="form-control" name="jobLogoPath" placeholder="jobLogoPath" required="" capture>
-                                    
-                                <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-							
-							
-                         </div>
-                         
-                          <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary tf-btn color">Submit</button> <!-- Send button -->
-</div>
-                    </form><!-- end form wrapper -->
+                        </div>							
+					</div>
 					
-                </div><!-- end col 10 with offset 1 to centered -->
-            </div> <!-- end contact form outer row with centered text-->
-
-        </div><!-- end container -->
-
-    </div>
-	
+				    <div class="row"> 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" autocomplete="off" class="form-control" placeholder="Job Start Date *" id="jobStartDate" name="jobStartDate" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter your password">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               <input type="text" autocomplete="off" class="form-control" placeholder="Job End Date*" id="jobEndDate" name="jobEndDate" onfocus="(this.type='date')" onblur="(this.type='text')"required data-validation-required-message="Please enter your phone no.">
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+					</div>
+					
+					<div class="row">
+					   <div class="col-md-12">
+                         <div class="form-group">
+						    <input id="jobLogoPath" type="file" class="form-control" name="jobLogoPath" placeholder="jobLogoPath" required="" capture>
+                              <p class="help-block text-danger"></p>
+                         </div>
+                       </div>
+					</div>
+                         
+                        <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary tf-btn color">Submit</button>
+						</div>
+            </form><!-- end form wrapper -->
+		 </div>
+        </div>
+    </div><!-- end container -->
 
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">

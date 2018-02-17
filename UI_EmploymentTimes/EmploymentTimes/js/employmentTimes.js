@@ -138,3 +138,33 @@ function CheckAuthorization()
 		$('#mEditJobs').css('display','block');
 	}
 }
+
+var myApp=angular.module('myApp',[])
+
+myApp.controller('govController',function($scope,$http){
+$http.get("http://localhost:9000/GetGovJobs")
+.then(function(response){
+$scope.jobList= response.data;
+});
+});
+
+myApp.controller('privateController',function($scope,$http){
+$http.get("http://localhost:9000/GetPrivateJobs")
+.then(function(response){
+$scope.jobList= response.data;
+});
+});
+
+myApp.controller('defenceController',function($scope,$http){
+$http.get("http://localhost:9000/GetDefenceJobs")
+.then(function(response){
+$scope.jobList= response.data;
+});
+});
+
+myApp.controller('bankController',function($scope,$http){
+$http.get("http://localhost:9000/GetBankJobs")
+.then(function(response){
+$scope.jobList= response.data;
+});
+});

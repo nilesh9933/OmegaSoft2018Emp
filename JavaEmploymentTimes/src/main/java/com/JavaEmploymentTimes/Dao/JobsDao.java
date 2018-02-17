@@ -133,7 +133,7 @@ public class JobsDao implements IJobsDao{
 		
 		try
 		{
-			String sql="SELECT jobId, jobTitle, jobType,jobLogoPath \r\n" + 
+			String sql="SELECT jobId, jobTitle, jobDes,jobLogoPath \r\n" + 
 					   "FROM empdb.jobs where delInd='N' and jobType='Defence'";
 		
 			Statement st = con.createStatement();			
@@ -144,7 +144,7 @@ public class JobsDao implements IJobsDao{
 				Jobs obj=new Jobs();				
 				obj.setJobId(Integer.parseInt( rs.getString("jobId")));
 				obj.setJobTitle(rs.getString("jobTitle"));
-				obj.setJobType(rs.getString("jobType"));
+				obj.setJobType(rs.getString("jobDes"));
 				obj.setJobLogoPath(rs.getString("jobLogoPath"));
 				
 				jobList.add(obj);
@@ -166,7 +166,7 @@ public class JobsDao implements IJobsDao{
 		
 		try
 		{
-			String sql="SELECT jobId, jobTitle, jobType,jobLogoPath \r\n" + 
+			String sql="SELECT jobId, jobTitle, jobDes,jobLogoPath \r\n" + 
 					   "FROM empdb.jobs where delInd='N' and jobType='Bank'";
 		
 			Statement st = con.createStatement();			
@@ -177,7 +177,7 @@ public class JobsDao implements IJobsDao{
 				Jobs obj=new Jobs();				
 				obj.setJobId(Integer.parseInt( rs.getString("jobId")));
 				obj.setJobTitle(rs.getString("jobTitle"));
-				obj.setJobType(rs.getString("jobType"));
+				obj.setJobType(rs.getString("jobDes"));
 				obj.setJobLogoPath(rs.getString("jobLogoPath"));
 				
 				jobList.add(obj);
