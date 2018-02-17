@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 
@@ -66,6 +67,14 @@ function AlignModelCenter(ButtonId,modelID){
  debugger;
         myWindow.data("kendoWindow").center().open();
         $(modelID).data('kendoWindow').center();
+        
+        $('#userEmail').val('');
+	    $('#userPassword').val('');
+	    $('#errorBox').css('display','none');
+	    $('#errorMsg').text('');
+        
+        
+        
         $(modelID).closest(".k-window").css({
             position: 'fixed',
             margin: 'auto',
@@ -76,7 +85,7 @@ function AlignModelCenter(ButtonId,modelID){
 
 
 function DoLogin(){
-	debugger;
+	
 	var userName=$('#userEmail').val();
 	var password=$('#userPassword').val();
 	
@@ -92,8 +101,18 @@ function DoLogin(){
 		contentType: "application/json; charset=utf-8",
         dataType: "json",
 		success:function(data){
-			debugger;
 			
+			if(data.email==null || data.email=="")
+			{
+				$('#errorBox').css('display','block');
+				$('#errorMsg').text('Invalid credentials, please try again.');
+			    $('#userEmail').val('');
+			    $('#userPassword').val('');
+			}
+			else {
+				
+			$('#errorBox').css('display','none');
+			$('#errorMsg').text('');
 			$('#loginModel').data("kendoWindow").close();
 			sessionStorage.setItem("Email", data.email);
 			sessionStorage.setItem("Role", data.role);
@@ -111,16 +130,35 @@ function DoLogin(){
 			$('#mInvoice').css("display","block");
 			$('#mReports').css("display","block");
 			$('#mPayments').css("display","block");
+			$('#mLogin').css("display","none");
+            $('#mLogout').css("display","block");
 			
 				}
+			}
 		},
 		error:function(e){
-			debugger;
+			
 			console.log(e);
 		}
 		
 	});	
 }
+	
+	function Logout()
+	{
+		sessionStorage.removeItem('Email');
+		sessionStorage.removeItem('Role');
+		$('#mRegister').css('display','block');
+		$('#btnLogin').css('display','block');
+		$('#btnLogout').css('display','none');
+	}
+	
+	
+	
+	
+	
+	
+	
 
 
 function FillProductTypeDropDown()
@@ -130,7 +168,7 @@ function FillProductTypeDropDown()
 		  url:"http://localhost:9000/GetProductTypes",
 		  success:function(data)
 		  {
-		  debugger;
+		  
 		   $('#dropdown').kendoDropDownList({
 		   dataSource:data,
 		   dataTextField:"proType",
@@ -141,7 +179,7 @@ function FillProductTypeDropDown()
 		  },
 		  error:function(e)
 		  {
-		    debugger;
+		    
 		  console.log(e);
 		  }
 		  

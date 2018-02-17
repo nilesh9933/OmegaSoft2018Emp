@@ -2,9 +2,9 @@ $(document).ready(function(){
 
 GetModelReady("#btnLogin","#loginModel");
 
-	/*$.ajax({		
+	$.ajax({		
 		type:"GET",
-		url:"http://localhost:28790/Header/Header",
+		url:"http://localhost:9000/Header/Header",
 		success:function(viewHtml){	
 		
 			$('#header').replaceWith(viewHtml);
@@ -17,7 +17,7 @@ GetModelReady("#btnLogin","#loginModel");
 	});
 	$.ajax({		
 		type:"GET",
-		url:"http://localhost:28790/Header/Footer",
+		url:"http://localhost:9000/Header/Footer",
 		success:function(viewHtml){	
 	
 			$('#footer').replaceWith(viewHtml);
@@ -25,7 +25,7 @@ GetModelReady("#btnLogin","#loginModel");
 		error:function(e){			
 			console.log(e);
 		}		
-	});*/
+	});
 	
 	
 });
@@ -36,7 +36,7 @@ GetModelReady("#btnLogin","#loginModel");
 
 function GetModelReady(ButtonId, modelID) {
 
-debugger;
+
     var myWindow = $(modelID);
     var button = $(ButtonId);
 
@@ -62,7 +62,7 @@ function AlignModelCenter(ButtonId,modelID){
  var myWindow = $(modelID);
  var button = $(ButtonId);
  button.click(function () {
- debugger;
+ 
         myWindow.data("kendoWindow").center().open();
         $(modelID).data('kendoWindow').center();
         $(modelID).closest(".k-window").css({
@@ -75,7 +75,7 @@ function AlignModelCenter(ButtonId,modelID){
 
 
 function DoLogin(){
-	debugger;
+	
 	var userName=$('#userEmail').val();
 	var password=$('#userPassword').val();
 	
@@ -91,14 +91,14 @@ function DoLogin(){
 		contentType: "application/json; charset=utf-8",
         dataType: "json",
 		success:function(data){
-			debugger;
+			
 			
 			$('#loginModel').data("kendoWindow").close();
 			sessionStorage.setItem("Email", data.email);
 			sessionStorage.setItem("Role", data.role);
 		},
 		error:function(e){
-			debugger;
+			
 			console.log(e);
 		}
 		

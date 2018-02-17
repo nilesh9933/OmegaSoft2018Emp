@@ -95,19 +95,27 @@
            <div class="row text-center"> <!-- contact form outer row with centered text-->
                 <div class="col-md-8"> <!-- col 10 with offset 1 to centered -->
                     
-                        <div class="row"> <!-- nested inner row -->
+                        <div class="row"> 
+                        
+                        <div class="form-group input-group" id="errorBox" style="display:none;">
+							      <span id="errorMsg" style="color:red;"></span>
+							      </div>
 
-                            <!-- Input your name -->
+                            
                             <div class="col-md-12">
-                                <div class="form-group"> <!-- Your first name input -->
+                                <div class="form-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                
                                     <input type="text" autocomplete="off" class="form-control" placeholder="Enter user email *" id="userEmail" name="userEmail" required data-validation-required-message="Please enter your email id">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
 							 <!-- Input your name -->
                             <div class="col-md-12">
-                                <div class="form-group"> 
-								 <input type="password" autocomplete="off" class="form-control" placeholder="Enter password" id="userPassword" name="userPassword" required data-validation-required-message="Please enter your password"></textarea>
+                                <div class="form-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                 
+								 <input type="password" autocomplete="off" class="form-control" placeholder="Enter password" id="userPassword" name="userPassword" required data-validation-required-message="Please enter your password">
                                 </div>
                             </div>
                          </div>                            
