@@ -6,18 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | Corlate</title>
-	
-	<!-- core CSS -->
+		
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+         
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -28,7 +24,7 @@
     <link href="Style/css/bootstrap.css" rel="stylesheet">
 
 	
-	</head><!--/head-->
+</head>
 
 <body class="homepage">
 
@@ -57,8 +53,8 @@
                        </div>
                     </div>
                 </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
+            </div>
+        </div>
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
@@ -91,11 +87,10 @@
                         <li><a href="contact-us.html">Contact</a></li>                        
                     </ul>
                 </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
+            </div>
+        </nav>
 		
-    </header><!--/header-->
-
+    </header>
    
 
     <section id="feature" style="background-color: white">
@@ -104,58 +99,61 @@
                     <h2>Add EPaper</h2>
             </div>
 		    
-             <div class="row text-center"> <!-- contact form outer row with centered text-->
+             <div class="row text-center">
                 <div class="col-md-10 col-md-offset-1">
-                <form  method="POST" action="http://localhost:9000/AddEpaperPost">
+					<form  method="POST" action="http://localhost:9000/AddEpaperPost">
                    
                      <div class="row">
-                         <div class="col-md-6">
-                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter Paper Name" name="pTitle" reqired />
-                    </div>
-                </div>
-                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="textarea" class="form-control" name="pDes" placeholder="Enter discription" >
-                    </div>
-                </div>
-                </div>
-                <div class="row">
-                     
-                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="date" class="form-control" name="pPostDate" placeholder="Enter Paper Post Date" >
-                    </div>
-                </div>
-                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="date" class="form-control" name="pStartDate" placeholder="Enter  Start Date" >
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                     
-                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="date" class="form-control" name="pEndDate" placeholder="Enter End  Date" >
-                    </div>
-                </div>
-                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="file" class="form-control" name="pSharePath" placeholder="Share path" >
-                    </div>
-                </div>
-            </div>
+                       <div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Please enter e-Paper Name" id="pTitle" name="pTitle" required data-validation-required-message="Please enter e-Paper name">
+						</div>
+					   </div>
+					   <div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" id="pPostDate" name="pPostDate" placeholder="e-Paper Post Date *" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter e-Paper post date">
+						</div>
+					   </div>
+					 </div>
+					 
+					 <div class="row">
+					   <div class="col-md-12">
+						<div class="form-group">
+							<textarea class="form-control" rows="5" id="pDes" name="pDes" placeholder="Please enter e-Paper Description" required data-validation-required-message="Please enter e-Paper Description"></textarea>
+						</div>
+					   </div>
+					 </div>
+					 
+					 <div class="row">
+                      <div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" id="pStartDate" name="pStartDate" placeholder="e-Paper Start Date *" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter e-Paper Start date">
+						</div>
+					  </div>
+					  <div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" name="pEndDate" placeholder="e-Paper End Date *" onfocus="(this.type='date')" onblur="(this.type='text')" required data-validation-required-message="Please enter e-Paper End date">
+						</div>
+					  </div>
+					 </div>
+					 
+					 <div class="row">
+                      <div class="col-md-12">
+						<div class="form-group">
+							<input type="file" class="form-control" id="pSharePath" name="pSharePath" placeholder="Share path" >
+						</div>
+					  </div>
+					 </div>
+					 
                      <button type="submit" class="btn btn-primary" style="margin-left:0;">Submit</button>
                    
-                </form>
-            </div>
-            <div class="col-lg-4 col-md-3 col-sm-1 hidden-xs"></div>
-      			</div>	
-
-							
-       </div><!--/.container-->
-    </section><!--/#feature-->
+					</form>
+				</div>
+				
+      		</div>	
+				
+       </div>
+    </section>
 
     <section id="bottom">
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -173,7 +171,7 @@
                             <li><a href="#">Contact us</a></li>
                         </ul>
                     </div>    
-                </div><!--/.col-md-3-->
+                </div>
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
@@ -188,7 +186,7 @@
                             <li><a href="#">Billing system</a></li>
                         </ul>
                     </div>    
-                </div><!--/.col-md-3-->
+                </div>
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
@@ -203,7 +201,7 @@
                             <li><a href="#">Article Writing</a></li>
                         </ul>
                     </div>    
-                </div><!--/.col-md-3-->
+                </div>
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
@@ -218,10 +216,10 @@
                             <li><a href="#">Laboris</a></li>
                         </ul>
                     </div>    
-                </div><!--/.col-md-3-->
+                </div>
             </div>
         </div>
-    </section><!--/#bottom-->
+    </section>
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
@@ -239,7 +237,7 @@
                 </div>
             </div>
         </div>
-    </footer><!--/#footer-->
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
