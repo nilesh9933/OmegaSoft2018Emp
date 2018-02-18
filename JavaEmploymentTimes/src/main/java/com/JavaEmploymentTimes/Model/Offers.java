@@ -1,33 +1,21 @@
 package com.JavaEmploymentTimes.Model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Offers {
 	private int couId;
 	private String couCode;
-	private int couAmount;
-	private Date couStartDate;
-	private Date couEndDate;
-	private String delInd;
-	private String updateUser;
-	private Date updateDate;
-	private String ipAddress;
-	public int getCouId() {
-		return couId;
-	}
-	public void setCouId(int couId) {
-		this.couId = couId;
-	}
+	private Float couAmount;
 	public String getCouCode() {
 		return couCode;
 	}
 	public void setCouCode(String couCode) {
 		this.couCode = couCode;
 	}
-	public int getCouAmount() {
+	public Float getCouAmount() {
 		return couAmount;
 	}
-	public void setCouAmount(int couAmount) {
+	public void setCouAmount(Float couAmount) {
 		this.couAmount = couAmount;
 	}
 	public Date getCouStartDate() {
@@ -66,6 +54,17 @@ public class Offers {
 	public void setIpAddress(String ipAddress) {
 		this.ipAddress = ipAddress;
 	}
+	public void setCouId(int couId) {
+		this.couId = couId;
+	}
+	private Date couStartDate;
+	private Date couEndDate;
+	private String delInd;
+	private String updateUser;
+	private Date updateDate;
+	private String ipAddress;
+	public int getCouId() {
+		return couId;
+	}
 	
-
 }
