@@ -1,5 +1,7 @@
 package com.JavaMaharashtraAutoService.Controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,5 +20,12 @@ public class RolesController {
 	{
 		RoleDao obj=new RoleDao();			
 		return obj.AddRole(role);
+	}
+	
+	@RequestMapping(value="/GetRoles",method=RequestMethod.GET)
+	public List<Roles> GetRoleList()
+	{
+		RoleDao obj=new RoleDao();
+		return obj.GetRoles();
 	}
 }
