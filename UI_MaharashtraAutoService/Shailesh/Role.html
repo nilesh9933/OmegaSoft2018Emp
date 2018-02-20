@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAS - User Roles Page</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+ </head>
+ <body>
+
+    <!-- Main Navigation 
+    ================================================== -->
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#"><img src="img/logo.png" alt="logo" style="height: 65px; width: 130px;"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html" class="scroll">Home</a></li>
+                <li><a href="EmpLogin.html" class="scroll">Employee Login</a></li>
+                <li><a href="AdminLogin.html" class="scroll">Admin Login</a></li>
+                <li><a href="#tf-works" class="scroll">Works</a></li>
+                <li><a href="#tf-process" class="scroll">Process</a></li>
+                <li><a href="#tf-pricing" class="scroll">Pricing</a></li>
+                
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Employee Login 
+    ================================================== -->
+	
+<div id="tf-services">
+         <div class="container"><!-- container -->            
+
+            <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
+                    <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddRole"> <!-- form wrapper -->
+
+					<h2 ><strong>Add User Roles</strong></h2><br>
+                        <div class="row"> <!-- nested inner row -->
+
+                            <!-- Input your name -->
+                            <div class="col-md-12">
+                                 <div class="input-group">
+ 		 				<span class="input-group-addon" id="userId" style="height: 38px;">  Role Name :</span>
+
+  						<input type="text" autocomplete="off" class="form-control" placeholder="Role Name *" id="rolName" name="rolName" required data-validation-required-message="Please enter role name.">
+									 <p class="help-block text-danger"></p>
+  								</div><br>
+                               
+                               
+                            </div>
+							 <!-- Input your name -->
+                            <div class="col-md-12">
+                               
+                                <div class="input-group">
+ 		 				<span class="input-group-addon" id="userId" style="height: 38px;">  Role Name :</span>
+
+  						<textarea class="form-control" rows="7" placeholder="Role Description" id="rolDes" name="rolDes" style="resize: none;" required data-validation-required-message="Please enter role description."></textarea>
+									<p class="help-block text-danger"></p>
+  								</div>
+                               
+                                
+                            </div>
+                         </div> <br>                           
+                        <button type="submit" class="btn btn-primary">Add Role</button> <!-- Send button -->
+
+                    </form><!-- end form wrapper -->
+                </div><!-- end col 10 with offset 1 to centered -->
+            </div> <!-- end contact form outer row with centered text-->
+
+        </div><!-- end container -->
+
+       <br><br><br>
+	</div>
+
+ 
+
+
+    <!-- Footer 
+    ================================================== -->
+    <div id="tf-footer">
+        <div class="container"><!-- container -->
+            <p class="pull-left"> Copyright ©  2018  Maharastra Automobiles Services. All rights reserved. </p> <!-- copyright text here-->
+            <ul class="list-inline social pull-right">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link -->
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li> <!-- Change # With your Dribbble Link -->
+                <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link -->
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li> <!-- Change # With your Youtube Link -->
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li> <!-- Change # With your Pinterest Link -->
+            </ul>
+        </div><!-- end container -->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/owl.carousel.js"></script><!-- Owl Carousel Plugin -->
+
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    
+		
+
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>

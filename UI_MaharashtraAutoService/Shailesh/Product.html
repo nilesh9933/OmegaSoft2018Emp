@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAS - Products Page</title>
+    
+    
+    <!-- Favicons
+    ================================================== -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+
+
+
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+	
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	
+	<style>
+	
+	.k-widget.k-dropdown.k-header.form-group
+	{
+	width:100%;
+	}
+	</style>
+  </head>
+  <body>
+
+    <!-- Main Navigation 
+    ================================================== -->
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#"><img src="img/logo.png" alt="logo" style="height: 65px; width: 130px;"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="./index.html" class="scroll">Home</a></li>
+                <li><a href="#tf-services" class="scroll">Services</a></li>
+                <li><a href="#tf-about" class="scroll">About</a></li>
+                <li><a href="#tf-works" class="scroll">Works</a></li>
+                <li><a href="#tf-process" class="scroll">Process</a></li>
+                <li><a href="#tf-pricing" class="scroll">Pricing</a></li>
+                <li><a href="#tf-blog" class="scroll">Blog</a></li>
+                <li><a href="#tf-contact" class="scroll">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    
+    <!-- Contact Section
+    ================================================== -->
+    <div id="tf-contact">
+
+       <div class="container"><!-- container -->            
+
+            <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
+                    <form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddProduct"> <!-- form wrapper -->
+
+					<h2>Add Products</h2>
+                        <div class="row"> <!-- nested inner row -->
+
+                            <!-- Input your name -->
+                      
+					<div class="col-md-6">
+                      	<div class="input-group">
+ 		 					<span class="input-group-addon" id="productId" style="height: 38px;">  Product ID :</span>
+
+  							<div id="dropdown" class="form-group"> <!-- Your first name input -->
+                                    
+                        	</div>
+  						</div>
+                    </div>
+                           
+                             
+							<div class="col-md-6">
+                            
+ 					<div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Name :</span>
+
+  						 <input type="text" autocomplete="off" class="form-control" placeholder="Product Name *" id="proName" name="proName" required data-validation-required-message="Please enter role name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                            </div>
+							
+							
+							<div class="col-md-6">
+                               
+                               <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Description :</span>
+
+  						  <textarea class="form-control" rows="7", style="resize:none;" placeholder="Product Description *" id="proDes" name="proDes" required data-validation-required-message="Please enter Product Description"></textarea>
+                                    <p class="help-block text-danger"></p>
+  								</div>
+                           
+                            </div>
+                           
+                             
+							<div class="col-md-6">
+                               
+                               
+                                      
+ 					<div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Purchase Date :</span>
+
+  						<input type="text" autocomplete="off" class="form-control" placeholder="Product Purchase Date *" id="proPurDate" name="proPurDate" onfocus="(this.type='date')" required data-validation-required-message="Please enter role name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                   
+                            </div>
+							
+							
+							<div class="col-md-6">
+                               
+                               
+                               <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Purchase Rate :</span>
+
+  						   <input type="text" autocomplete="off" class="form-control" placeholder="Product Purchase Rate *" id="proPurRate" name="proPurRate" required data-validation-required-message="Please enter role name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                            </div>
+							
+							
+							<div class="col-md-6">
+                               
+                               
+                               
+                                 <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Sale Rate :</span>
+
+  						    <input type="text" autocomplete="off" class="form-control" placeholder="Product Sale Rate *" id="proSaleRate" name="proSaleRate" required data-validation-required-message="Please enter role name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                            </div>
+							
+																			
+							<div class="col-md-6">
+                               
+                                 <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Manufacturing Date :</span>
+
+  						     <input type="date" autocomplete="off" class="form-control" placeholder="Product Manufacturing Date *" id="proManDate" name="proManDate" onfocus="(this.type='date')" required data-validation-required-message="Please enter Manufacturing Date name.">
+                                    <p class="help-block text-danger"></p>
+  					</div>
+                            </div>						
+						
+						
+							<div class="col-md-6">
+                               
+                               
+                               
+                                 <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Expiry Date :</span>
+
+  						     <input type="text" autocomplete="off" class="form-control" placeholder="Product Expiry Date *" id="proExpDate" name="proExpDate" onfocus="(this.type='date')" required data-validation-required-message="Please enter Expiry Date name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                               
+                            </div>
+							
+					
+							<div class="col-md-6">
+                               
+                                
+                                 <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product company :</span>
+
+  						  <input type="text" autocomplete="off" class="form-control" placeholder="Product Manufacture company *" id="proManComp" name="proManComp" required data-validation-required-message="Please enter Company name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                            </div>					
+												
+							<div class="col-md-6" >
+                               
+                               
+                                    <div class="input-group">
+ 		 				<span class="input-group-addon" id="proname" style="height: 38px;">  Product Warranty Period :</span>
+
+  						  <input type="text" autocomplete="off" class="form-control" placeholder="Product Warranty Period *" id="proWarrPeriod" name="proWarrPeriod" required data-validation-required-message="Please enter role name.">
+                                    <p class="help-block text-danger"></p>
+  					</div><br>
+                            </div>
+							
+							
+							
+							
+							
+							
+							
+                         </div>                            
+                        <input type="submit" class="btn btn-primary" value="Add Product"> <!-- Send button -->
+
+                    </form><!-- end form wrapper -->
+                </div><!-- end col 10 with offset 1 to centered -->
+            </div> <!-- end contact form outer row with centered text-->
+
+        </div><!-- end container -->
+
+    </div>
+
+    <!-- Footer 
+    ================================================== -->
+    <div id="tf-footer">
+        <div class="container"><!-- container -->
+            <p class="pull-left"> Copyright ©  2018  Maharastra Automobiles Services. All rights reserved. </p> <!-- copyright text here-->
+            <ul class="list-inline social pull-right">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link -->
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li> <!-- Change # With your Dribbble Link -->
+                <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link -->
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li> <!-- Change # With your Youtube Link -->
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li> <!-- Change # With your Pinterest Link -->
+            </ul>
+        </div><!-- end container -->
+    </div>
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/owl.carousel.js"></script><!-- Owl Carousel Plugin -->
+
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+
+
+
+    <!-- Parallax Effects -->
+    <script type="text/javascript" src="js/skrollr.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.js"></script>
+
+    <!-- Portfolio Filter -->
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+
+    <!-- LightBox Nivo -->
+    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+
+    <!-- Contact page-->
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    
+
+    
+      
+      
+      
+  <link rel="stylesheet" href="css/kendo.common-material.min.css">
+  <link rel="stylesheet" href="css/kendo.material.min.css">
+  <link rel="stylesheet" href="css/kendo.material.mobile.min.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/kendo.all.min.js"></script>
+      
+       <script>
+$(document).ready(function(){
+  
+  $.ajax({
+  type:"GET",
+  url:"http://localhost:9000/GetProductTypes",
+  success:function(data)
+  {
+  debugger;
+   $('#dropdown').kendoDropDownList({
+   dataSource:data,
+   dataTextField:"proType",
+   dataValueField:"proTypeId",
+  
+  });
+  
+  },
+  error:function(e)
+  {
+    debugger;
+  console.log(e);
+  }
+  
+  });
+  
+  });
+  
+</script> 
+      
+      
+      
+      
+
+  </body>
+</html>

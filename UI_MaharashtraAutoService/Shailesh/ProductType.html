@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAS-Product Type Entry</title>
+    <meta name="description" content="Ethanol is an Agency and Personal Portfolio Template built with bootstrap 3.3.2. This is created for a cause to support my uncle's campaign. Go and Donate at - https://life.indiegogo.com/fundraisers/medical-support-for-a-filipino-overseas-worker--3/x/10058181">
+    <meta name="keywords" content="portfolio, agency, bootstrap theme, mobile responsive, template, personal">
+    <meta name="author" content="ThemeForces.Com">
+    
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+   
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+  </head>
+  <body>
+
+    <!-- Main Navigation 
+    ================================================== -->
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a href="#"><img src="img/logo.png" alt="logo" style="height: 65px; width: 130px;"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#tf-home" class="scroll">Home</a></li>
+                <li><a href="#tf-services" class="scroll">Services</a></li>
+                <li><a href="#tf-about" class="scroll">About</a></li>
+                <li><a href="#tf-works" class="scroll">Works</a></li>
+                <li><a href="#tf-process" class="scroll">Process</a></li>
+                <li><a href="#tf-pricing" class="scroll">Pricing</a></li>
+                <li><a href="#tf-blog" class="scroll">Blog</a></li>
+                <li><a href="#tf-contact" class="scroll">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+  
+
+       <div class="container"><!-- container -->            
+
+            <div class="row text-center"> <!-- contact form outer row with centered text-->
+                <div class="col-md-10 col-md-offset-1">
+				
+				<form id="contact-form" class="form" name="sentMessage" method="POST" action="http://localhost:9000/AddProductTypes">
+
+					<h2 style="margin-top:100px;">Add Product Types</h2>
+                        <div class="row"> <!-- nested inner row -->
+
+                            <!-- Input your name -->
+                            <div class="col-md-12">
+                                <div class="input-group">
+ 		 				<span class="input-group-addon" style="height: 38px;">  Product Type :</span>
+
+  						<input type="text" autocomplete="off" class="form-control" placeholder="Enter Product Type*" id="proType" name="proType" required data-validation-required-message="Please enter product type">
+  								</div>
+                               
+                            </div>
+							 <!-- Input your name -->
+                            <div class="col-md-12"><br>
+                               
+                               <div class="input-group">
+ 		 				<span class="input-group-addon" style="height: 38px;">  Product Description :</span>
+
+  						 <textarea class="form-control" rows="7" placeholder="Product Type Description" id="proTypeDes" name="proTypeDes"  style="resize: none;" required data-validation-required-message="Please enter role description."></textarea>
+                             
+                            </div>
+                         </div>     
+                         <div class="col-md-12"><br>                       
+                        <button type="submit" class="btn btn-primary">Add Product Type</button> <!-- Send button -->
+							</div>
+					</div>
+					
+                    </form><!-- end form wrapper -->
+                </div><!-- end col 10 with offset 1 to centered -->
+            </div> <!-- end contact form outer row with centered text-->
+
+        </div><!-- end container -->
+
+    
+
+    <!-- Footer 
+    ================================================== -->
+    <div id="tf-footer">
+        <div class="container"><!-- container -->
+            <p class="pull-left"> Copyright ©  2018  Maharastra Automobiles Services. All rights reserved. </p> <!-- copyright text here-->
+            <ul class="list-inline social pull-right">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link -->
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li> <!-- Change # With your Dribbble Link -->
+                <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link -->
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li> <!-- Change # With your Youtube Link -->
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li> <!-- Change # With your Pinterest Link -->
+            </ul>
+        </div><!-- end container -->
+    </div>
+    
+
+
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/owl.carousel.js"></script><!-- Owl Carousel Plugin -->
+
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+
+  
+    <!-- Parallax Effects -->
+    <script type="text/javascript" src="js/skrollr.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.js"></script>
+
+    <!-- Portfolio Filter -->
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+
+    <!-- LightBox Nivo -->
+    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+
+    <!-- Contact page-->
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+   
+
+
+  </body>
+</html>
