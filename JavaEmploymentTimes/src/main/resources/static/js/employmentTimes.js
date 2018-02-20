@@ -229,15 +229,16 @@ $http.get("http://localhost:8080/GetDefenceJobs")
 .then(function(response){
 $scope.jobList= response.data;
 });
-});
-
-var bankApp=angular.module('bankApp',[])
-
-.controller('bankController',function($scope,$http){
-
-
-$http.get("http://localhost:8080/GetBankJobs")
-.then(function(response){
-$scope.jobList= response.data;
-});
 });*/
+
+var viewPaper=angular.module('viewPaper',[])
+
+.controller('viewPaperController',function($scope,$http){
+
+$http.get("/GetEpaperDetails")
+.then(function(response){
+$scope.paperList= response.data;
+});
+});
+
+

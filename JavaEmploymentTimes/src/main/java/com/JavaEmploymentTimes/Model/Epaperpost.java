@@ -2,6 +2,8 @@ package com.JavaEmploymentTimes.Model;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Epaperpost {
 	private int pId;
 	private String pTitle;
@@ -14,6 +16,13 @@ public class Epaperpost {
 	private String ipAddress;
 	private String updateUser;
 	private Date updateDate;
+	private MultipartFile upload;
+	public MultipartFile getUpload() {
+		return upload;
+	}
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
+	}
 	public int getpId() {
 		return pId;
 	}
