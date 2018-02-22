@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.JavaMaharashtraAutoService.Model.offerandcoupon;
+import com.JavaMaharashtraAutoService.Util.ConstantsClass;
 import com.JavaMaharashtraAutoService.Util.MySQLConnection;
 
 public class offerandcouponDao implements IofferandcouponDao
@@ -20,11 +21,11 @@ public class offerandcouponDao implements IofferandcouponDao
 		String output = "";
 		try 
 		{
-			PreparedStatement pre = con.prepareStatement("insert into offerandcoupon(offCode,offStartDate,offEndDate,offDes,offType,offAmt,delInd,updateUser,updateDate)values(?,?,?,?,?,?,?,?,?)");
+			PreparedStatement pre = con.prepareStatement(ConstantsClass.OfferInsertSQL);
 		
 			pre.setString(1, offcou.getOffCode());
-			pre.setDate(2, offcou.getOffstartDate());
-			pre.setDate(3, offcou.getOffendDate());
+			pre.setString(2, offcou.getOffStartDate());
+			pre.setString(3, offcou.getOffEndDate());
 			pre.setString(4, offcou.getOffDes());
 			pre.setString(5, offcou.getOffType());
 			pre.setFloat(6, offcou.getOffAmt());

@@ -6,8 +6,8 @@ public class offerandcoupon {
 	
 	private int offId;
 	private String offCode;
-	private Date offstartDate;
-	private Date offendDate;
+	private String offStartDate;
+	private String offEndDate;
 	private String offDes;
 	private String offType;
 	private Float offAmt;
@@ -26,17 +26,17 @@ public class offerandcoupon {
 	public void setOffCode(String offCode) {
 		this.offCode = offCode;
 	}
-	public Date getOffstartDate() {
-		return offstartDate;
+	public String getOffStartDate() {
+		return offStartDate;
 	}
-	public void setOffstartDate(Date offstartDate) {
-		this.offstartDate = offstartDate;
+	public void setOffStartDate(String offStartDate) {
+		this.offStartDate = offStartDate;
 	}
-	public Date getOffendDate() {
-		return offendDate;
+	public String getOffEndDate() {
+		return offEndDate;
 	}
-	public void setOffendDate(Date offendDate) {
-		this.offendDate = offendDate;
+	public void setOffEndDate(String offEndDate) {
+		this.offEndDate = offEndDate;
 	}
 	public String getOffDes() {
 		return offDes;
