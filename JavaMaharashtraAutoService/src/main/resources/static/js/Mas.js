@@ -1,10 +1,9 @@
-var myApp=angular.module("myApp",[]);
+var myApp = angular.module("myApp", []);
 
-myApp.controller("rolesController",function($scope,$http){
-	
-	$http.get("/GetRoles")
-	.then(function(response){
-	$scope.roleList= response.data;
+myApp.controller("rolesController", function($scope, $http) {
+
+	$http.get("/GetRoles").then(function(response) {
+		$scope.roleList = response.data;
 	});
 });
 
@@ -81,14 +80,14 @@ function DoLogin() {
 			} else {
 				$('#errorBox').css('display', 'none');
 				$('#errorMsg').text('');
-			
+
 				$('#loginModel').data("kendoWindow").close();
 				sessionStorage.setItem("Email", data.email);
 				sessionStorage.setItem("Role", data.role);
-	
+
 				CheckAuthentication();
 			}
-			
+
 		},
 		error : function(e) {
 			debugger;
@@ -108,7 +107,8 @@ function FillProductTypeDropDown() {
 				dataSource : data,
 				dataTextField : "proType",
 				dataValueField : "proTypeId",
-
+				change : onChange,
+				optionLabel: "Select Product Type"
 			});
 
 		},
@@ -151,28 +151,25 @@ function BindHeaderFooter() {
 }
 
 function CheckAuthentication() {
-	
-	if(sessionStorage.getItem("Email")==null || sessionStorage.getItem(""))
-	{
-		
-	$('#mRegistration').css('display','block');
-	$('#mLogin').css('display','block');
-	$('#mLogout').css('display','none');
-	$('#mWelcome').css('display','none');
-	}
-	else{
-	$('#mRegistration').css('display','none');
-    $('#mLogin').css('display','none');
-	$('#mLogout').css('display','block');
-	$('#mWelcome').css('display','block');
-	$('#mWelcomeLnk').text('Welcome : '+ sessionStorage.getItem("Email"));
-	CheckAuthorization();
+
+	if (sessionStorage.getItem("Email") == null || sessionStorage.getItem("")) {
+
+		$('#mRegistration').css('display', 'block');
+		$('#mLogin').css('display', 'block');
+		$('#mLogout').css('display', 'none');
+		$('#mWelcome').css('display', 'none');
+	} else {
+		$('#mRegistration').css('display', 'none');
+		$('#mLogin').css('display', 'none');
+		$('#mLogout').css('display', 'block');
+		$('#mWelcome').css('display', 'block');
+		$('#mWelcomeLnk').text('Welcome : ' + sessionStorage.getItem("Email"));
+		CheckAuthorization();
 	}
 }
 
-function CheckAuthorization()
-{
-	
+function CheckAuthorization() {
+
 	if (sessionStorage.getItem("Role") == "Admin") {
 		$('#mRoles').css("display", "block");
 		$('#mJobs').css("display", "block");
@@ -189,16 +186,14 @@ function CheckAuthorization()
 	}
 }
 
-
-function Logout()
-{
+function Logout() {
 
 	sessionStorage.removeItem('Email');
 	sessionStorage.removeItem('Role');
-	$('#mRegistration').css('display','block');
-	$('#mLogin').css('display','block');
-	$('#mLogout').css('display','none');
-	$('#mWelcome').css('display','none');
+	$('#mRegistration').css('display', 'block');
+	$('#mLogin').css('display', 'block');
+	$('#mLogout').css('display', 'none');
+	$('#mWelcome').css('display', 'none');
 	$('#mRoles').css("display", "none");
 	$('#mJobs').css("display", "none");
 	$('#mProdType').css("display", "none");
@@ -210,12 +205,12 @@ function Logout()
 	$('#mInvoice').css("display", "none");
 	$('#mReports').css("display", "none");
 	$('#mPayments').css("display", "none");
-	
-	window.location.href="/index.html";
+
+	window.location.href = "/index.html";
 }
 
+function onChange() {
 
-
-
-
-
+	var proTypeId=$('#dropdown').val();
+	$('#proTypeId').val(proTypeId);
+}

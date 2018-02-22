@@ -2,6 +2,8 @@ package com.JavaMaharashtraAutoService.Model;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Products {
 	private int proId;
 	private String proName;
@@ -17,8 +19,21 @@ public class Products {
 	private String delInd;
 	private String updateUser;
 	private Date updateDate;
+	private String proImagePath;
+	private MultipartFile proImage;
 	
-	
+	public String getProImagePath() {
+		return proImagePath;
+	}
+	public void setProImagePath(String proImagePath) {
+		this.proImagePath = proImagePath;
+	}
+	public MultipartFile getProImage() {
+		return proImage;
+	}
+	public void setProImage(MultipartFile proImage) {
+		this.proImage = proImage;
+	}
 	public Date getProPurDate() {
 		return proPurDate;
 	}

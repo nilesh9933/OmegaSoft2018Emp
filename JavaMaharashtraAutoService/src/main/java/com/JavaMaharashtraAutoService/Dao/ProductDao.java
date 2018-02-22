@@ -1,9 +1,15 @@
 package com.JavaMaharashtraAutoService.Dao;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.JavaMaharashtraAutoService.Model.Products;
+import com.JavaMaharashtraAutoService.Util.ConstantsClass;
 import com.JavaMaharashtraAutoService.Util.MySQLConnection;
 
 public class ProductDao implements IProductDao
@@ -21,8 +27,9 @@ public class ProductDao implements IProductDao
 	public String AddProduct(Products prod)
 	{
 		String output = "";
+		String sysPath = "F:\\JavaGit\\NewMaster\\OmegaSoft2018EMP\\JavaMaharashtraAutoService\\src\\main\\resources\\static\\upload\\";
 		try {
-			PreparedStatement pre = con.prepareStatement("insert into product(proId,proName,proDes,proPurDate,proPurRate,proSaleRate,proManDate,proExpDate,proManComp,proWarrPeriod,proTypeId,delInd,updateUser,updateDate) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement pre = con.prepareStatement(ConstantsClass.ProductInsertSQL);
 			pre.setInt(1, prod.getProId());
 			pre.setString(2, prod.getProName());
 			pre.setString(3, prod.getProDes());
@@ -37,6 +44,12 @@ public class ProductDao implements IProductDao
 			pre.setString(12, "N");
 			pre.setString(13, prod.getUpdateUser());
 			pre.setDate(14, prod.getUpdateDate());
+			if (!prod.getProImage().isEmpty()) {
+				pre.setString(15, "/upload/" + prod.getProImage().getOriginalFilename());
+			}
+			pre.executeUpdate();
+
+			SaveFileOnSharePath(prod.getProImage(),sysPath);
 			pre.executeUpdate();
 			output = "Data has been inserted successfully.";
 
@@ -60,6 +73,19 @@ public class ProductDao implements IProductDao
 	public String DeleteProduct() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	private void SaveFileOnSharePath(MultipartFile file, String sysPath) {
+		
+		try {
+			if (!file.isEmpty()) {
+				byte[] bytes = file.getBytes();
+				Path path = Paths.get(sysPath + file.getOriginalFilename());
+				Files.write(path, bytes);
+			}
+		} catch (Exception e) {
+
+		}
 	}
 
 }

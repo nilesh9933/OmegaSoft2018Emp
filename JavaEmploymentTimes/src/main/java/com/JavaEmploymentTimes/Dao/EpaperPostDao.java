@@ -27,7 +27,7 @@ public class EpaperPostDao implements IEpaperPostDao {
 	@Override
 	public String AddEpaperPost(Epaperpost ePaperPost) {
 		String output = "";
-		String sharePath = "F:\\JavaGit\\NewMaster\\OmegaSoft2018EMP\\JavaEmploymentTimes\\src\\main\\upload\\";
+		String sharePath = "F:\\JavaGit\\NewMaster\\OmegaSoft2018EMP\\JavaEmploymentTimes\\src\\main\\resources\\static\\upload\\";
 
 		try {
 			PreparedStatement pre = con.prepareStatement(ConstantsClass.ePaperPostSQL);
@@ -40,14 +40,14 @@ public class EpaperPostDao implements IEpaperPostDao {
 			pre.setString(6, ePaperPost.getpEndDate());
 
 			if (!ePaperPost.getUpload().isEmpty()) {
-				pre.setString(7, sharePath + ePaperPost.getUpload().getOriginalFilename());
+				pre.setString(7, "/upload/" + ePaperPost.getUpload().getOriginalFilename());
 			}
 			pre.setString(8, "N");
 			pre.setString(9, ePaperPost.getIpAddress());
 			pre.setString(10, ePaperPost.getUpdateUser());
 			pre.setDate(11, ePaperPost.getUpdateDate());
 			pre.executeUpdate();
-			SaveDocumentsOnSharePath(ePaperPost.getUpload());
+			SaveDocumentsOnSharePath(ePaperPost.getUpload(),sharePath);
 			output = "Data has been inserted successfully.";
 		} catch (Exception e) {
 			output = "Data not inserted .";
@@ -69,8 +69,8 @@ public class EpaperPostDao implements IEpaperPostDao {
 		return null;
 	}
 
-	private void SaveDocumentsOnSharePath(MultipartFile file) {
-		String sharePath = "F:\\JavaGit\\NewMaster\\OmegaSoft2018EMP\\JavaEmploymentTimes\\src\\main\\upload\\";
+	private void SaveDocumentsOnSharePath(MultipartFile file,String sharePath) {
+		
 		try {
 			if (!file.isEmpty()) {
 				byte[] bytes = file.getBytes();
