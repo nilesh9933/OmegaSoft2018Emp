@@ -1,5 +1,7 @@
 package com.JavaMaharashtraAutoService.Controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,16 @@ public class offerandcouponController {
 	public @ResponseBody String Addofferandcoupon(@ModelAttribute("offerandcoupon") offerandcoupon offcou) {
 		offerandcouponDao obj = new offerandcouponDao();
 		return obj.Addofferandcoupon(offcou);
+	}
+	
+	
+	@RequestMapping(value = "/GetOffer", method = RequestMethod.GET )
+	public List<offerandcoupon> GetOffer()
+	{
+		offerandcouponDao offers = new offerandcouponDao();
+		return offers.GetOffer();
+		
+		
 	}
 
 }

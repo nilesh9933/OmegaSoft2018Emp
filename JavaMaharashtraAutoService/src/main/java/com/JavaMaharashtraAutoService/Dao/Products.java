@@ -26,7 +26,7 @@ public class Products {
 		try {
 
 			Statement st = con.createStatement();
-			String sql = "SELECT proTypeId,proType FROM prodtype";
+			String sql = "SELECT proTypeId,proType, proTypeDes FROM prodtype";
 			ResultSet rs = st.executeQuery(sql);
 
 			proTypeList = new ArrayList<ProductType>();
@@ -34,6 +34,7 @@ public class Products {
 				ProductType obj = new ProductType();
 				obj.setProTypeId(rs.getInt("proTypeId"));
 				obj.setProType(rs.getString("proType"));
+				obj.setProTypeDes(rs.getString("proTypeDes"));
 				proTypeList.add(obj);
 			}
 		} catch (Exception e) {

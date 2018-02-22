@@ -1,5 +1,39 @@
 var myApp = angular.module("myApp", []);
 
+
+
+
+
+myApp.controller("offerController",function($scope,$http){
+	
+	$http.get("/GetOffer")
+	.then(function(response){
+	$scope.offerList= response.data;
+	});
+});
+
+
+
+
+myApp.controller("productTypeController",function($scope,$http){
+	
+	$http.get("/GetProductTypes")
+	.then(function(response){
+	$scope.productTypeList= response.data;
+	});
+});
+
+
+
+
+myApp.controller("usersController",function($scope,$http){
+	
+	$http.get("/ViewAllUsers")
+	.then(function(response){
+	$scope.usersList= response.data;
+	});
+});
+
 myApp.controller("rolesController", function($scope, $http) {
 
 	$http.get("/GetRoles").then(function(response) {

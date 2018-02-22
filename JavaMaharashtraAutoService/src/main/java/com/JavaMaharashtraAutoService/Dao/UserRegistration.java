@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.JavaMaharashtraAutoService.Model.Log;
 import com.JavaMaharashtraAutoService.Model.LoginDetails;
@@ -89,5 +90,49 @@ public class UserRegistration implements IUserRegistration {
 		}
 		
 		return output;
+	}
+
+	@Override
+	public List<Users> ViewAllUsers() {
+		List<Users> listusers=new ArrayList<Users>();
+		try {
+			Statement st=con.createStatement();
+			String sql="Select userId, userFirstName, userLastName, userEmail, userDob, userContact, userMob, userName, rolId, userPan, userAdhar, userWorkExp, userAddress, userJoiningDate, userResignDate, isActive, updateUser, updateDate FROM users where delInd = 'N';";
+			ResultSet rs=st.executeQuery(sql);
+			
+			while (rs.next()) {
+				Users user=new Users();
+				user.setUserId(rs.getInt("userId"));
+				user.setUserFirstName(rs.getString("userFirstName"));
+				user.setUserLastName(rs.getString("userLastName"));
+				user.setUserEmail(rs.getString("userEmail"));
+				user.setUserDob(rs.getDate("userDob"));
+				user.setUserContact(rs.getString("userContact"));
+				user.setUserMob(rs.getString("userMob"));
+				user.setUserName(rs.getString("userName"));
+				user.setRolId(rs.getInt("rolId"));
+				user.setUserPan(rs.getString("userPan"));
+				user.setUserAdhar(rs.getString("userAdhar"));
+				user.setUserWorkExp(rs.getString("userWorkExp"));
+				user.setUserAddress(rs.getString("userAddress"));
+				user.setUserJoiningDate(rs.getDate("userJoiningDate"));
+				user.setUserResignDate(rs.getDate("userResignDate"));
+				user.setIsActive(rs.getString("isActive"));
+				user.setUpdateUser(rs.getString("updateUser"));
+				user.setUpdateDate(rs.getDate("updateDate"));
+				
+				
+				listusers.add(user);
+				
+				
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return listusers;
 	}
 }

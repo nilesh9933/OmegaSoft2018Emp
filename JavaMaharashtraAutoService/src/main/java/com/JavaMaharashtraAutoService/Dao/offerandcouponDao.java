@@ -2,6 +2,10 @@ package com.JavaMaharashtraAutoService.Dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.JavaMaharashtraAutoService.Model.offerandcoupon;
 import com.JavaMaharashtraAutoService.Util.ConstantsClass;
@@ -56,5 +60,35 @@ public class offerandcouponDao implements IofferandcouponDao
 	public String Deleteofferandcoupon() {
 		// TODO Auto-generated method stub
 		return "";
+	}
+
+	@Override
+	public List<offerandcoupon> GetOffer() {
+		List<offerandcoupon> listoffer=new ArrayList<offerandcoupon>();
+		try
+		{
+			Statement st=con.createStatement();
+			String sql="Select * from offerandcoupon where delInd='N'";
+			ResultSet rs=st.executeQuery(sql);
+			
+			while(rs.next())
+			{
+				offerandcoupon off=new offerandcoupon();
+				off.setOffId(rs.getInt("offId"));
+				off.setOffCode(rs.getString("offCode"));
+				off.setOffStartDate(rs.getString("offStartDate"));
+				off.setOffEndDate(rs.getString("offEndDate"));
+				off.setOffDes(rs.getString("offDes"));
+				off.setOffType(rs.getString("offType"));
+				off.setOffAmt(rs.getFloat("offAmt"));
+				
+				listoffer.add(off);
+			}
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return listoffer;
 	}
 }

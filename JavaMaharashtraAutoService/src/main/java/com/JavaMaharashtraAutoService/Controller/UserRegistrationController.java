@@ -1,5 +1,7 @@
 package com.JavaMaharashtraAutoService.Controller;
 
+import java.util.List;
+
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,6 +16,11 @@ import com.JavaMaharashtraAutoService.Dao.UserRegistration;
 import com.JavaMaharashtraAutoService.Model.LoginDetails;
 import com.JavaMaharashtraAutoService.Model.Users;
 
+
+
+
+
+
 @RestController
 public class UserRegistrationController {
 	
@@ -25,6 +32,7 @@ public class UserRegistrationController {
 		UserRegistration regdao=new UserRegistration();		
 		return regdao.AddUser(user);		
 	}
+	
 	
 	
 	@CrossOrigin
@@ -41,5 +49,27 @@ public class UserRegistrationController {
 		
 		return json;
 	}
+	
+	
+	
+
+	@RequestMapping(value="/ViewAllUsers", method=RequestMethod.GET)
+	public List<Users> ViewAllUsers()
+	{
+		UserRegistration object=new UserRegistration();
+		
+		return object.ViewAllUsers();
+		
+	}
+	
+	
+	
+	
+	
 
 }
+
+
+
+
+
