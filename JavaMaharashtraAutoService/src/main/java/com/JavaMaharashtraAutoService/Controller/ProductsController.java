@@ -20,13 +20,12 @@ public class ProductsController
 {
 	//Products Controller Start for AksProducts.html
 	
-	@RequestMapping(value="/AddProduct",method=RequestMethod.POST)
-	@ResponseBody
-	public String AddProduct(com.JavaMaharashtraAutoService.Model.Products pro)
-	{
-		ProductDao obj=new ProductDao();			
-		return obj.AddProduct(pro);		
+	@RequestMapping(value = "/AddProduct", method = RequestMethod.POST, consumes = "multipart/form-data")
+	public @ResponseBody String AddProduct(@ModelAttribute com.JavaMaharashtraAutoService.Model.Products pro) {
+		ProductDao obj = new ProductDao();
+		return obj.AddProduct(pro);
 	}
+
 	
 	//Products Controller End For AksProducts.html
 	
@@ -49,7 +48,7 @@ public class ProductsController
 	}
 	
 	
-	@CrossOrigin
+	/*@CrossOrigin
 	@RequestMapping(value = "/AddProducts", method = RequestMethod.POST,produces=MediaType.APPLICATION_JSON_VALUE)
 	
 	public @ResponseBody JsonResponse AddProducts(@RequestBody com.JavaMaharashtraAutoService.Model.Products prod) {
@@ -60,7 +59,7 @@ public class ProductsController
 		json.setJsonString(obj.AddProducts(prod));
 		
 		return json;
-	}
+	}*/
 }
 class JsonResponse
 {

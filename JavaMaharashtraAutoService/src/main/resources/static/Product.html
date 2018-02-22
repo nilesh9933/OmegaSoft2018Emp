@@ -66,26 +66,21 @@
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-10 col-md-offset-1" style="margin-top: 180px;">
-				<form id="contact-form" class="form" name="sentMessage"
+				<form id="contact-form" enctype="multipart/form-data" class="form" name="sentMessage"
 					method="POST" action="/AddProduct">
-					<!-- form wrapper -->
-
+					
 					<h2>Products</h2>
 					<div class="row">
-						<!-- nested inner row -->
-
-						<!-- Input your name -->
 
 						<div class="col-md-6">
-							<div id="dropdown" class="form-group">
-								<!-- Your first name input -->
-
-							</div>
+							<div id="dropdown" class="form-group"></div>
+							<input type="text" autocomplete="off" class="form-control"
+								id="proTypeId" name="proTypeId" style="display:none;" />
 						</div>
 
 						<div class="col-md-6">
 							<div class="form-group">
-								<!-- Your first name input -->
+
 								<input type="text" autocomplete="off" class="form-control"
 									placeholder="Product Name *" id="proName" name="proName"
 									required
@@ -94,53 +89,19 @@
 							</div>
 						</div>
 
-						<div class="col-md-6">
+
+
+
+						<div class="col-md-12">
 							<div class="form-group">
-								<!-- Your first name input -->
-								<input type="text" autocomplete="off" class="form-control"
+								<textarea class="form-control" rows="7"
 									placeholder="Product Description *" id="proDes" name="proDes"
 									required
-									data-validation-required-message="Please enter role name.">
-								<p class="help-block text-danger"></p>
+									data-validation-required-message="Please enter product description."></textarea>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<!-- Your first name input -->
-								<input type="text" autocomplete="off" class="form-control"
-									placeholder="Product Purchase Date *" id="proPurDate"
-									name="proPurDate" onfocus="(this.type='date')" required
-									data-validation-required-message="Please enter role name.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="form-group">
-								<!-- Your first name input -->
-								<input type="text" autocomplete="off" class="form-control"
-									placeholder="Product Purchase Rate *" id="proPurRate"
-									name="proPurRate" required
-									data-validation-required-message="Please enter role name.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="form-group">
-								<!-- Your first name input -->
-								<input type="text" autocomplete="off" class="form-control"
-									placeholder="Product Sale Rate *" id="proSaleRate"
-									name="proSaleRate" required
-									data-validation-required-message="Please enter role name.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-
-
-						<div class="col-md-6">
-							<div class="form-group">
-								<!-- Your first name input -->
 								<input type="text" autocomplete="off" class="form-control"
 									placeholder="Product Manufacturing Date *" id="proManDate"
 									name="proManDate" onfocus="(this.type='date')" required
@@ -148,10 +109,56 @@
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+
+								<input type="text" autocomplete="off" class="form-control"
+									placeholder="Product Manufacture company *" id="proManComp"
+									name="proManComp" required
+									data-validation-required-message="Please enter Company name.">
+								<p class="help-block text-danger"></p>
+
+
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+
+								<input type="text" autocomplete="off" class="form-control"
+									placeholder="Product Purchase Rate *" id="proPurRate"
+									name="proPurRate" required
+									data-validation-required-message="Please enter role name.">
+								<p class="help-block text-danger"></p>
+
+							</div>
+						</div>
+
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" autocomplete="off" class="form-control"
+									placeholder="Product Sale Rate *" id="proSaleRate"
+									name="proSaleRate" required
+									data-validation-required-message="Please enter role name.">
+								<p class="help-block text-danger"></p>
+
+							</div>
+						</div>
 						<br>
 						<div class="col-md-6">
 							<div class="form-group">
-								<!-- Your first name input -->
+								<input type="text" autocomplete="off" class="form-control"
+									placeholder="Product Purchase Date *" id="proPurDate"
+									name="proPurDate" onfocus="(this.type='date')" required
+									data-validation-required-message="Please enter role name.">
+								<p class="help-block text-danger"></p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								
 								<input type="text" autocomplete="off" class="form-control"
 									placeholder="Product Expiry Date *" id="proExpDate"
 									name="proExpDate" onfocus="(this.type='date')" required
@@ -160,22 +167,9 @@
 							</div>
 						</div>
 
-						<br>
-						<div class="col-md-6">
-							<div class="form-group">
-								<!-- Your first name input -->
-								<input type="text" autocomplete="off" class="form-control"
-									placeholder="Product Manufacture company *" id="proManComp"
-									name="proManComp" required
-									data-validation-required-message="Please enter Company name.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-
-						<br>
+						<br> <br>
 						<div class="col-md-6">
 							<div class="form-group" centered content>
-								<!-- Your first name input -->
 								<input type="text" autocomplete="off" class="form-control"
 									placeholder="Product Warranty Period *" id="proWarrPeriod"
 									name="proWarrPeriod" required
@@ -183,23 +177,21 @@
 								<p class="help-block text-danger"></p>
 							</div>
 						</div>
-
-
-
-
-
-
-
+						<div class="col-md-6">
+							<div class="form-group" centered content>
+								<input type="file" id="proImage" name="proImage" />
+							</div>
+						</div>
 					</div>
-					<input type="submit" value="Submit">
-					<!-- Send button -->
+					<input type="submit" value="Submit"
+						class="btn btn-primary tf-btn color">
+
 
 				</form>
-				<!-- end form wrapper -->
+
 			</div>
-			<!-- end col 10 with offset 1 to centered -->
+
 		</div>
-		<!-- end contact form outer row with centered text-->
 
 	</div>
 
@@ -209,7 +201,7 @@
 	<link rel="stylesheet" href="css/kendo.common-material.min.css">
 	<link rel="stylesheet" href="css/kendo.material.min.css">
 	<link rel="stylesheet" href="css/kendo.material.mobile.min.css">
-
+	<script src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.js"></script>

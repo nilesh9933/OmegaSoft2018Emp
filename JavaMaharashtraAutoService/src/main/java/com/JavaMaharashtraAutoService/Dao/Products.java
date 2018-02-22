@@ -67,27 +67,5 @@ public class Products {
 		return message;
 	}
 
-	public String AddProducts(com.JavaMaharashtraAutoService.Model.Products prod) {
-		String message = "";
-		try {
-			PreparedStatement pre = con.prepareStatement("INSERT INTO product (proName,proTypeDes,proTypeId) VALUES (?,?,?)");
-			
-			pre.setString(1, prod.getProName());
-			pre.setString(2, prod.getProDes());
-			pre.setInt(3, prod.getProTypeId());
-			pre.executeUpdate();
-			message = "Data inserted";
-		} catch (Exception e) {
-			Log obj = new Log();
-			obj.setEventName("ProductsClass");
-			obj.setEventMessage(e.getMessage());
-			obj.setEventType("Exception");
-
-			Logger.WriteLog(obj);
-		}
-		
-		return message;
-
-	}
 
 }
