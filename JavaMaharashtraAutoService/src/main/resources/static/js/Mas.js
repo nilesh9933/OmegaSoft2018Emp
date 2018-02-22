@@ -8,8 +8,7 @@ myApp.controller("rolesController", function($scope, $http) {
 });
 
 $(document).ready(function() {
-	BindHeaderFooter();
-	CheckAuthentication();
+	BindHeaderFooter();	
 	FillProductTypeDropDown();
 });
 
@@ -130,6 +129,7 @@ function BindHeaderFooter() {
 
 			$('#header').replaceWith(viewHtml);
 
+			CheckAuthentication();
 			GetModelReady("#btnLogin", "#loginModel");
 		},
 		error : function(e) {
