@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Employment Times- Home</title>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+         
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="stylesheet" href="css/kendo.common-material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+	</head><!--/head-->
+
+<body class="homepage">
+
+<form id="index" name="index">
+   
+<div id="header"></div>
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img1.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img2.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </section>
+<div ng-app="myApp">
+
+<div ng-controller="govAppController" id="govJobDiv">  
+
+<table ng-repeat="x in jobList" border="1px">
+
+<tbody>
+<tr  >
+<td style="width:100px">
+{{x.jobId}}
+</td>
+<td style="width:100px">
+{{x.jobTitle}}
+</td>
+<td style="width:100px">
+{{x.jobType}}
+</td>
+<td style="width:100px">
+{{x.jobLogoPath}}
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+    </div>
+  
+    <div id="footer"></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/employmentTimes.js"></script>
+	
+	<div id="loginModel">
+	
+                    <div>
+						  <div>
+							<div class="Absolute-Center is-Responsive">
+							 
+							  <div>	
+							      <div class="form-group input-group" id="errorBox" style="display:none;">
+							      <span id="errorMsg" style="color:red;"></span>
+							      </div>							
+								  <div class="form-group input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input class="form-control" type="text" name='userName' id='userName' placeholder="Please enter Username"/>          
+								  </div>
+								  <div class="form-group input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+									<input class="form-control" type="password" name='userPassword' id='userPassword' placeholder="Please enter Password"/>     
+								  </div>
+								  <div class="form-group">
+									<input type="button" class="btn btn-primary tf-btn color" id="btnSubmit" value="Login" onclick="DoLogin();"></input>
+								  </div>
+								  <div class="form-group text-center">
+									<a href="#">Forgot Password</a>
+								  </div>								      
+							  </div>  
+							</div>    
+						  </div>
+					</div> 
+	</div>
+	
+</form>
+</body>
+</html>
