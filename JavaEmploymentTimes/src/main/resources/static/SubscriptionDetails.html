@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>EmployementTimes- Subscription's Detail</title>
+
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+	<div id="header"></div>
+
+	<section class="pricing-area shortcode-item">
+
+		<div class="center wow fadeInDown animated"
+			style="padding-bottom: 10px; visibility: visible; animation-name: fadeInDown;">
+			<h2>Buy Subscription</h2>
+		</div>
+		<div class="container" ng-app="viewSubDetails">
+			<div class="row text-center">
+				<div class="col-sm-12 plan price-three wow fadeInDown animated"
+					style="visibility: visible; animation-name: fadeInDown;"
+					ng-controller="SubDetailsController">
+					<ul>
+						<li class="heading-three" style="padding: 30px;"><span
+							style="font-size: 28px; float: left; margin-left: 10px;">Total
+								Payment to be made Rs. {{subAmount}}</span> <span
+							style="font-size: 28px;">Transaction ID: 50</span></li>
+						<li><h3 style="font-size: 28px; color: black;">You have
+								subscribed for our {{subTimeDuration}} plan</h3></li>
+						<li>ePaper valid for {{subValidFor}}-{{subTimeDuration}}</li>
+
+						<li>Total Payment to be made Rs. {{subAmount}}</li>
+						<li>When you select Buy and Payment option you will redirect
+							to payment gateway page</li>
+						<li>where you can make your payment in highly secured mode.</li>
+						<li class="plan-action"><a class="btn btn-primary"
+							href="/Subscription/SubscriptionBuy/1">Buy and Payment
+								Rs.{{subAmount}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="footer"></div>
+
+	<link rel="stylesheet" href="css/kendo.common-material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script src="js/employmentTimes.js"></script>
+</body>
+</html>

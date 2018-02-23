@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>EmployementTimes- View Subscriptions</title>
+
+<!-- core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="images/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+	<div id="header"></div>
+
+	<section class="pricing-area shortcode-item">
+		<div class="container" ng-app="viewSub">
+
+			<div class="row text-center" ng-controller="SubController">
+				<h2>Subscriptions</h2>
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-sm-3 plan price-one wow fadeInDown animated"
+						style="visibility: visible; animation-name: fadeInDown;"
+						ng-repeat="x in SubList">
+						<ul>
+							<li class="heading-one">
+								<h1 id="subId" style="display: none;">{{x.subId}}</h1>
+								<h3>{{x.subName}}</h3> <span>Rs. {{x.subAmount}}</span>
+							</li>
+							<li>ePaper valid for {{x.subValidFor}}-{{x.subTimeDuration}}</li>
+							<li>{{x.subDes}}</li>
+							<li>{{x.subStartDate}}</li>
+							<li>To</li>
+							<li>{{x.subEndDate}}</li>
+							<li class="plan-action"><a class="btn btn-primary"
+								href="SubscriptionDetails.html?subId=1">Subscribe</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<div id="footer"></div>
+
+	<link rel="stylesheet" href="css/kendo.common-material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.min.css" />
+	<link rel="stylesheet" href="css/kendo.material.mobile.min.css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script src="js/employmentTimes.js"></script>
+</body>
+</html>
