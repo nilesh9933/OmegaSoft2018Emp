@@ -13,9 +13,9 @@ public class DBConnection {
 		try {
 			if (con == null) {
 				String driver = "com.mysql.jdbc.Driver";
-				String url = "jdbc:mysql://localhost:3306/masdb";
+				String url = "jdbc:mysql://localhost:3306/mas";
 				String user = "root";
-				String password = "12345";
+				String password = "sasa";
 				Class.forName(driver);
 
 				con = DriverManager.getConnection(url, user, password);

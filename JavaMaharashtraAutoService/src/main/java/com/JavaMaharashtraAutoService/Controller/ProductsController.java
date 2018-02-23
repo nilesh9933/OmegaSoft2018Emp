@@ -2,10 +2,8 @@ package com.JavaMaharashtraAutoService.Controller;
 
 import java.util.List;
 
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -46,6 +44,15 @@ public class ProductsController
 		Products obj=new Products();
 		return obj.AddProductTypes(prodType);
 	}
+	
+	@RequestMapping(value="/GetProducts",method=RequestMethod.GET)
+	public List<com.JavaMaharashtraAutoService.Model.Products> GetProductList()
+	{
+		ProductDao obj=new ProductDao();
+		return obj.GetProducts(); 
+		
+	}
+	
 	
 	
 	/*@CrossOrigin

@@ -3,7 +3,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All Users Information</title>
+<title>MAS -View Product</title>
 <meta name="description"
 	content="Ethanol is an Agency and Personal Portfolio Template built with bootstrap 3.3.2. This is created for a cause to support my uncle's campaign. Go and Donate at - https://life.indiegogo.com/fundraisers/medical-support-for-a-filipino-overseas-worker--3/x/10058181">
 <meta name="keywords"
@@ -38,32 +38,26 @@
 		<div class="row text-center">
 			<div class="col-md-12" style="margin-top: 280px; margin-bottom:50px;" ng-app="myApp">
 
-				<div ng-controller="usersController">
+				<div ng-controller="productController">
 
 
-					
 					<table border="1px">
-					<tbody>
-							<tr ng-repeat="x in usersList">
-								<td style="width: 100px">{{x.userId}}</td>
-								<td style="width: 100px">{{x.userFirstName}}</td>
-								<td style="width: 100px">{{x.userLastName}}</td>
-								<td style="width: 100px">{{x.userEmail}}</td>
-								<td style="width: 100px">{{x.userDob}}</td>
-								<td style="width: 100px">{{x.userContact}}</td>
-								<td style="width: 100px">{{x.userMob}}</td>
-								<td style="width: 100px">{{x.userName}}</td>
-								<td style="width: 100px">{{x.rolId}}</td>
-								<td style="width: 100px">{{x.userPan}}</td>
-								<td style="width: 100px">{{x.userAdhar}}</td>
-								<td style="width: 100px">{{x.userWorkExp}}</td>
-								<td style="width: 100px">{{x.userAddress}}</td>
-								<td style="width: 100px">{{x.userJoiningDate}}</td>
-								<td style="width: 100px">{{x.userResignDate}}</td>
-								<td style="width: 100px">{{x.isActive}}</td>
-								
-								<td style="width: 100px"><a href="#">Edit</a></td>
-								<td style="width: 100px"><a href="#">Delete</a></td>
+
+						<tbody>
+							<tr  ng-repeat="x in productList">
+								<td style="width: 150px">{{x.proId}}</td>
+								<td style="width: 150px">{{x.proName}}</td>
+								<td style="width: 150px">{{x.proDes}}</td>
+								<td style="width: 150px">{{x.proPurDate}}</td>
+								<td style="width: 150px">{{x.proPurRate}}</td>
+								<td style="width: 150px">{{x.proSaleRate}}</td>
+								<td style="width: 150px">{{x.proManDate}}</td>
+								<td style="width: 150px">{{x.proExpDate}}</td>
+								<td style="width: 150px">{{x.proManComp}}</td>
+								<td style="width: 150px">{{x.proWarrPeriod}}</td>
+								<td style="width: 150px">{{x.proTypeId}}</td>
+								<td style="width: 150px"><a href="#">Edit</a></td>
+								<td style="width: 150px"><a href="#">Delete</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -77,7 +71,6 @@
 	<link rel="stylesheet" href="css/kendo.common-material.min.css">
 	<link rel="stylesheet" href="css/kendo.material.min.css">
 	<link rel="stylesheet" href="css/kendo.material.mobile.min.css">
-	
 	<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.js"></script>

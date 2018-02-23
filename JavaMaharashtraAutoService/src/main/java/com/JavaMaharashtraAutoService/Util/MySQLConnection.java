@@ -14,9 +14,9 @@ public class MySQLConnection {
 
 			if (con == null) {
 				String driver = "com.mysql.jdbc.Driver";
-				String URL = "jdbc:mysql://localhost:3306/masdb";
+				String URL = "jdbc:mysql://localhost:3306/mas";
 				String user = "root";
-				String password = "12345";
+				String password = "sasa";
 
 				Class.forName(driver);
 

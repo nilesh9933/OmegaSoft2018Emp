@@ -5,6 +5,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -86,6 +90,52 @@ public class ProductDao implements IProductDao
 		} catch (Exception e) {
 
 		}
+	}
+
+
+
+	@Override
+	public List<Products> GetProducts() 
+	{
+		List<Products> listProducts=new ArrayList<Products>();
+		try 
+		{
+			Statement st=con.createStatement();
+			String sql="SELECT proId,proName,proDes,proPurDate,proPurRate,proSaleRate,\r\n" + 
+					"    proManDate,proExpDate,proManComp,\r\n" + 
+					"    proWarrPeriod,proTypeId,updateUser,updateDate\r\n" + 
+					"FROM product where delInd='N';";
+			ResultSet rs=st.executeQuery(sql);
+			
+			while(rs.next())
+			{
+				Products pro=new Products();
+				pro.setProId(rs.getInt("proId"));
+				pro.setProName(rs.getString("proName"));
+				pro.setProDes(rs.getString("proDes"));
+				pro.setProManDate(rs.getDate("proManDate"));
+				pro.setProManComp(rs.getString("proManComp"));
+				pro.setProPurDate(rs.getDate("proPurDate"));
+				pro.setProPurRate(rs.getFloat("proPurRate"));
+				pro.setProSaleRate(rs.getFloat("proSaleRate"));
+				pro.setProExpDate(rs.getDate("proExpDate"));
+				pro.setProWarrPeriod(rs.getString("proWarrPeriod"));
+				pro.setProTypeId(rs.getInt("proTypeId"));
+				pro.setUpdateUser(rs.getString("updateUser"));
+				pro.setUpdateDate(rs.getDate("updateDate"));
+				
+				
+				listProducts.add(pro);
+			}
+
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		return listProducts;
+
 	}
 
 }

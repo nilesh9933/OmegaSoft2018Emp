@@ -1,6 +1,12 @@
 var myApp = angular.module("myApp", []);
 
-
+myApp.controller("productController",function($scope,$http){
+	
+	$http.get("/GetProducts")
+	.then(function(response){
+	$scope.productList= response.data;
+	});
+});
 
 
 
